@@ -35,15 +35,15 @@ Usuário Avançado
    usuario-avancado-odoo/odoo-configuracoes-tecnicas
    usuario-avancado-odoo/odoo-importacao-e-exportacao-de-dados
 
-..
-    Treinamento Funcional
-    =====================
 
-    .. toctree::
-       :maxdepth: 1
+Treinamento Funcional
+=====================
 
-       introducao-funcional-ao-odoo/modulo-7-cadastros
-       introducao-funcional-ao-odoo/modulo-8-recursos-humanos
-       introducao-funcional-ao-odoo/modulo-9-comunicacoes-emails
-       introducao-funcional-ao-odoo/modulo-10-fiscal
-       introducao-funcional-ao-odoo/modulo-11-ponto-de-venda
+.. toctree::
+   :maxdepth: 1
+
+   introducao-funcional-odoo/modulo-7-cadastros
+   introducao-funcional-odoo/modulo-8-recursos-humanos
+   introducao-funcional-odoo/modulo-9-comunicacoes-emails
+   introducao-funcional-odoo/modulo-10-fiscal
+   introducao-funcional-odoo/modulo-11-ponto-de-venda
