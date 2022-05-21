@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+      <title>Testando o Odoo sem instalar</title>
+    
+      <link rel="stylesheet" href="../_static/pygments.css">
+      <!-- bundled in js (rollup iife) -->
+      <!-- <link rel="stylesheet" href="../_static/theme.css"> -->
+      <link rel="stylesheet" href="../_static/sphinx_press_theme.css">
+          <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+          <link rel="stylesheet" href="../_static/css/theme.css " type="text/css" />
+      
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+
+      <!-- sphinx script_files -->
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+
+      
+      <!-- bundled in js (rollup iife) -->
+      <!-- <script src="../_static/theme-vendors.js"></script> -->
+      <script src="../_static/theme.js" defer></script>
+    
+  <link rel="index" title="Index" href="../genindex.html" />
+  <link rel="search" title="Search" href="../search.html" />
+  <link rel="next" title="Introdução" href="../instalando-o-odoo/index.html" />
+  <link rel="prev" title="Open Source / Open Core" href="licencas-do-odoo.html" /> 
+  </head>
+
+  <body>
+    <div id="app" class="theme-container" :class="pageClasses"><navbar @toggle-sidebar="toggleSidebar">
+  <router-link to="../index.html" class="home-link">
+    
+      <span class="site-name">Kmee: Treinamento Odoo</span>
+    
+  </router-link>
+
+  <div class="links">
+    <navlinks class="can-hide">
+
+  
+    <div class="nav-item">
+      <a href="../index.html#introducao-ao-odoo"
+         class="nav-link  router-link-active">
+         introdução ao odoo
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="../index.html#instalando-o-odoo"
+         class="nav-link ">
+         instalando o odoo
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="../index.html#usuario-avancado"
+         class="nav-link ">
+         usuário avançado
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="../index.html#treinamento-funcional"
+         class="nav-link ">
+         treinamento funcional
+      </a>
+    </div>
+  
+
+
+
+    </navlinks>
+  </div>
+</navbar>
+
+      
+      <div class="sidebar-mask" @click="toggleSidebar(false)">
+      </div>
+        <sidebar @toggle-sidebar="toggleSidebar">
+          
+          <navlinks>
+            
+
+  
+    <div class="nav-item">
+      <a href="../index.html#introducao-ao-odoo"
+         class="nav-link  router-link-active">
+         introdução ao odoo
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="../index.html#instalando-o-odoo"
+         class="nav-link ">
+         instalando o odoo
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="../index.html#usuario-avancado"
+         class="nav-link ">
+         usuário avançado
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="../index.html#treinamento-funcional"
+         class="nav-link ">
+         treinamento funcional
+      </a>
+    </div>
+  
+
+
+
+            
+          </navlinks><div id="searchbox" class="searchbox" role="search">
+  <div class="caption"><span class="caption-text">Quick search</span>
+    <div class="searchformwrapper">
+      <form class="search" action="../search.html" method="get">
+        <input type="text" name="q" />
+        <input type="submit" value="Search" />
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
+  </div>
+</div><div class="sidebar-links" role="navigation" aria-label="main navigation">
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="../index.html#introducao-ao-odoo">introdução ao odoo</a></span>
+      </p>
+      <ul class="current">
+        
+          <li class="toctree-l1 "><a href="odoo-comece-por-aqui.html" class="reference internal ">Comece por aqui</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="a-historia-do-odoo.html" class="reference internal ">A história do Odoo</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="a-arquitetura-do-odoo.html" class="reference internal ">A arquitetura do Odoo</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="odoo-community-association.html" class="reference internal ">Odoo Community Association</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="licencas-do-odoo.html" class="reference internal ">Open Source / Open Core</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 current"><a href="#" class="reference internal current">Testando o Odoo sem instalar</a>
+
+            
+              <ul>
+                
+                  <li class="toctree-l2"><a href="#saas-da-odoo-sa" class="reference internal">1 - SaaS da Odoo SA</a></li>
+                
+                  <li class="toctree-l2"><a href="#ambientes-de-testes-e-demo" class="reference internal">2 - Ambientes de Testes e Demo</a></li>
+                
+              </ul>
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="../index.html#instalando-o-odoo">instalando o odoo</a></span>
+      </p>
+      <ul class="">
+        
+          <li class="toctree-l1 "><a href="../instalando-o-odoo/index.html" class="reference internal ">Introdução</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="../instalando-o-odoo/instalando-o-odoo-no-linux-com-o-instalador-deb.html" class="reference internal ">Instalando o Odoo no linux com o instalador .deb</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="../instalando-o-odoo/instalando-o-odoo-no-windows-com-o-instalador-exe.html" class="reference internal ">Instalando o Odoo no windows com o instalador .exe</a>
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="../index.html#usuario-avancado">usuário avançado</a></span>
+      </p>
+      <ul class="">
+        
+          <li class="toctree-l1 "><a href="../usuario-avancado-odoo/odoo-entendendo-a-interfaces-de-usuario.html" class="reference internal ">Interfaces de usuário</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="../usuario-avancado-odoo/odoo-configuracoes-basicas.html" class="reference internal ">Configurações básicas</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="../usuario-avancado-odoo/odoo-configuracoes-tecnicas.html" class="reference internal ">Configurações Técnicas</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="../usuario-avancado-odoo/odoo-importacao-e-exportacao-de-dados.html" class="reference internal ">Importação e Exportação de dados</a>
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="../index.html#treinamento-funcional">treinamento funcional</a></span>
+      </p>
+      <ul class="">
+        
+          <li class="toctree-l1 "><a href="../introducao-funcional-odoo/modulo-7-cadastros.html" class="reference internal ">Módulo 7 - Cadastros</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="../introducao-funcional-odoo/modulo-8-recursos-humanos.html" class="reference internal ">Módulo 8 - Recursos Humanos</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="../introducao-funcional-odoo/modulo-9-comunicacoes-emails.html" class="reference internal ">Módulo 9 - Comunicações / Emails</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="../introducao-funcional-odoo/modulo-10-fiscal.html" class="reference internal ">Treinamento Fiscal</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="../introducao-funcional-odoo/modulo-11-ponto-de-venda.html" class="reference internal ">Módulo 11 - Ponto de Venda</a>
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+</div>
+        </sidebar>
+
+      <page>
+          <div class="body-header" role="navigation" aria-label="navigation">
+  
+  <ul class="breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+    
+    <li>Testando o Odoo sem instalar</li>
+  </ul>
+  
+
+  <ul class="page-nav">
+  <li class="prev">
+    <a href="licencas-do-odoo.html"
+       title="previous chapter">← Open Source / Open Core</a>
+  </li>
+  <li class="next">
+    <a href="../instalando-o-odoo/index.html"
+       title="next chapter">Introdução →</a>
+  </li>
+</ul>
+  
+</div>
+<hr>
+          <div class="content" role="main" v-pre>
+            
+  <div class="section" id="testando-o-odoo-sem-instalar">
+<h1>Testando o Odoo sem instalar<a class="headerlink" href="#testando-o-odoo-sem-instalar" title="Permalink to this headline">¶</a></h1>
+<p>Formas simples de testar o Odoo sem precisar instala-lo!</p>
+<div class="section" id="saas-da-odoo-sa">
+<h2>1 - SaaS da Odoo SA<a class="headerlink" href="#saas-da-odoo-sa" title="Permalink to this headline">¶</a></h2>
+<p>Ao acessar o endereço <a class="reference external" href="https://www.odoo.com/pt_BR/trial">https://www.odoo.com/pt_BR/trial</a></p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Você consegue um banco de dados válido por alguns dias. Muitas coisas já vem pré configuradas por exemplo o envio de emails.</p>
+</div>
+<div class="section" id="ambientes-de-testes-e-demo">
+<h2>2 - Ambientes de Testes e Demo<a class="headerlink" href="#ambientes-de-testes-e-demo" title="Permalink to this headline">¶</a></h2>
+<p>Vale ressaltar todos os ambientes criados com dados de demonstração tem
+os seguintes usuários de demo:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 7%" />
+<col style="width: 6%" />
+<col style="width: 88%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Usuário</p></th>
+<th class="head"><p>Senha</p></th>
+<th class="head"><p>Perfil</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>admin</p></td>
+<td><p>admin</p></td>
+<td><p>Todos os acessos, incluindo backend e a maioria dos módulos. Mas pode ser necessário permissões adicionais em alguns casos</p></td>
+</tr>
+<tr class="row-odd"><td><p>demo</p></td>
+<td><p>demo</p></td>
+<td><p>Usuário com acesso não gerencial ao backend.</p></td>
+</tr>
+<tr class="row-even"><td><p>portal</p></td>
+<td><p>portal</p></td>
+<td><p>Acesso somente ao portal.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<dl class="simple">
+<dt>A <strong>localização brasileira</strong> adiciona outros usuários:</dt><dd><ul class="simple">
+<li><p>simples, presumido e real.</p></li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="demo-da-odoo-sa">
+<h3>2.1 Demo da Odoo SA<a class="headerlink" href="#demo-da-odoo-sa" title="Permalink to this headline">¶</a></h3>
+<p>Ao acessar o endereço <a class="reference external" href="https://demo.odoo.com">https://demo.odoo.com</a> você consegue um banco de
+dados de demonstração! Que é resetado diariamente.</p>
+<p>Ele já vem com vários dados de exemplo e vários apps instalados, o que é
+muito bom para fazer validações rápidas.</p>
+</div>
+<div class="section" id="runbot-da-odoo-sa">
+<h3>2.1 Runbot da Odoo SA<a class="headerlink" href="#runbot-da-odoo-sa" title="Permalink to this headline">¶</a></h3>
+<p>Ao acessar o endereço <a class="reference external" href="http://runbot.odoo.com/">http://runbot.odoo.com/</a> você irá ser redirecionado
+para a tela abaixo:</p>
+<div class="figure align-default" id="id1">
+<img alt="Tela principal do runbot" src="../_images/runbot.png" />
+<p class="caption"><span class="caption-text">Tela principal do runbot</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-default">
+<img alt="../_images/runbot-detais.jpeg" src="../_images/runbot-detais.jpeg" />
+</div>
+</div>
+<div class="section" id="runbot-da-oca">
+<h3>2.1 Runbot da OCA<a class="headerlink" href="#runbot-da-oca" title="Permalink to this headline">¶</a></h3>
+<p>Antigamente a OCA tinha uma infraestrutura de Runbot como a da Odoo SA.
+Entretanto devido ao alto custo de manutenção ele foi migrado para uma estrutura mais robusta: <em>Runboat</em>!</p>
+<p>Ferramenta com o mesmo princípio! Com apenas algumas alterações para o usuário final.</p>
+<ol class="arabic simple">
+<li><p>Ache o módulo ou projeto que você quer dar experimentar;</p></li>
+<li><p>Clique no link do runbot;</p></li>
+<li><p>Acesse a instancia;</p></li>
+</ol>
+<div class="figure align-default">
+<img alt="../_images/runboat1.png" src="../_images/runboat1.png" />
+</div>
+<div class="figure align-default">
+<img alt="../_images/runboat2.png" src="../_images/runboat2.png" />
+</div>
+<div class="figure align-default">
+<img alt="../_images/runboat3.png" src="../_images/runboat3.png" />
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+          <div class="page-nav">
+            <div class="inner"><ul class="page-nav">
+  <li class="prev">
+    <a href="licencas-do-odoo.html"
+       title="previous chapter">← Open Source / Open Core</a>
+  </li>
+  <li class="next">
+    <a href="../instalando-o-odoo/index.html"
+       title="next chapter">Introdução →</a>
+  </li>
+</ul><div class="footer" role="contentinfo">
+      &#169; Copyright 2022, KMEE INFORMATICA LTDA.
+    <br>
+    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a> 0.6.1.
+</div>
+            </div>
+          </div>
+      </page>
+    </div>
+    
+    
+  </body>
+</html>

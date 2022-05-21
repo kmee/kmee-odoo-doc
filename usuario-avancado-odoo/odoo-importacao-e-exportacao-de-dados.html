@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+      <title>Importação e Exportação de dados</title>
+    
+      <link rel="stylesheet" href="../_static/pygments.css">
+      <!-- bundled in js (rollup iife) -->
+      <!-- <link rel="stylesheet" href="../_static/theme.css"> -->
+      <link rel="stylesheet" href="../_static/sphinx_press_theme.css">
+          <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+          <link rel="stylesheet" href="../_static/css/theme.css " type="text/css" />
+      
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+
+      <!-- sphinx script_files -->
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+
+      
+      <!-- bundled in js (rollup iife) -->
+      <!-- <script src="../_static/theme-vendors.js"></script> -->
+      <script src="../_static/theme.js" defer></script>
+    
+  <link rel="index" title="Index" href="../genindex.html" />
+  <link rel="search" title="Search" href="../search.html" />
+  <link rel="prev" title="Configurações Técnicas" href="odoo-configuracoes-tecnicas.html" /> 
+  </head>
+
+  <body>
+    <div id="app" class="theme-container" :class="pageClasses"><navbar @toggle-sidebar="toggleSidebar">
+  <router-link to="../index.html" class="home-link">
+    
+      <span class="site-name">Kmee: Treinamento Odoo</span>
+    
+  </router-link>
+
+  <div class="links">
+    <navlinks class="can-hide">
+
+  
+    <div class="nav-item">
+      <a href="../index.html#introducao-ao-odoo"
+         class="nav-link ">
+         introdução ao odoo
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="../index.html#instalando-o-odoo"
+         class="nav-link ">
+         instalando o odoo
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="../index.html#usuario-avancado"
+         class="nav-link  router-link-active">
+         usuário avançado
+      </a>
+    </div>
+  
+
+
+
+    </navlinks>
+  </div>
+</navbar>
+
+      
+      <div class="sidebar-mask" @click="toggleSidebar(false)">
+      </div>
+        <sidebar @toggle-sidebar="toggleSidebar">
+          
+          <navlinks>
+            
+
+  
+    <div class="nav-item">
+      <a href="../index.html#introducao-ao-odoo"
+         class="nav-link ">
+         introdução ao odoo
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="../index.html#instalando-o-odoo"
+         class="nav-link ">
+         instalando o odoo
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="../index.html#usuario-avancado"
+         class="nav-link  router-link-active">
+         usuário avançado
+      </a>
+    </div>
+  
+
+
+
+            
+          </navlinks><div id="searchbox" class="searchbox" role="search">
+  <div class="caption"><span class="caption-text">Quick search</span>
+    <div class="searchformwrapper">
+      <form class="search" action="../search.html" method="get">
+        <input type="text" name="q" />
+        <input type="submit" value="Search" />
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
+  </div>
+</div><div class="sidebar-links" role="navigation" aria-label="main navigation">
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="../index.html#introducao-ao-odoo">introdução ao odoo</a></span>
+      </p>
+      <ul class="">
+        
+          <li class="toctree-l1 "><a href="../introducao-ao-odoo/odoo-comece-por-aqui.html" class="reference internal ">Comece por aqui</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="../introducao-ao-odoo/a-historia-do-odoo.html" class="reference internal ">A história do Odoo</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="../introducao-ao-odoo/a-arquitetura-do-odoo.html" class="reference internal ">A arquitetura do Odoo</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="../introducao-ao-odoo/odoo-community-association.html" class="reference internal ">Odoo Community Association</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="../introducao-ao-odoo/licencas-do-odoo.html" class="reference internal ">Open Source / Open Core</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="../introducao-ao-odoo/testando-o-odoo-sem-precisar-instalar.html" class="reference internal ">Testando o Odoo sem instalar</a>
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="../index.html#instalando-o-odoo">instalando o odoo</a></span>
+      </p>
+      <ul class="">
+        
+          <li class="toctree-l1 "><a href="../instalando-o-odoo/index.html" class="reference internal ">Introdução</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="../instalando-o-odoo/instalando-o-odoo-no-linux-com-o-instalador-deb.html" class="reference internal ">Instalando o Odoo no linux com o instalador .deb</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="../instalando-o-odoo/instalando-o-odoo-no-windows-com-o-instalador-exe.html" class="reference internal ">Instalando o Odoo no windows com o instalador .exe</a>
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="../index.html#usuario-avancado">usuário avançado</a></span>
+      </p>
+      <ul class="current">
+        
+          <li class="toctree-l1 "><a href="odoo-entendendo-a-interfaces-de-usuario.html" class="reference internal ">Interfaces de usuário</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="odoo-configuracoes-basicas.html" class="reference internal ">Configurações básicas</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="odoo-configuracoes-tecnicas.html" class="reference internal ">Configurações Técnicas</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 current"><a href="#" class="reference internal current">Importação e Exportação de dados</a>
+
+            
+              <ul>
+                
+                  <li class="toctree-l2"><a href="#exportar-dados-do-odoo" class="reference internal">Exportar dados do Odoo</a></li>
+                
+                  <li class="toctree-l2"><a href="#importar-dados-para-o-odoo" class="reference internal">Importar dados para o Odoo</a></li>
+                
+              </ul>
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+</div>
+        </sidebar>
+
+      <page>
+          <div class="body-header" role="navigation" aria-label="navigation">
+  
+  <ul class="breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+    
+    <li>Importação e Exportação de dados</li>
+  </ul>
+  
+
+  <ul class="page-nav">
+  <li class="prev">
+    <a href="odoo-configuracoes-tecnicas.html"
+       title="previous chapter">← Configurações Técnicas</a>
+  </li>
+</ul>
+  
+</div>
+<hr>
+          <div class="content" role="main" v-pre>
+            
+  <div class="section" id="importacao-e-exportacao-de-dados">
+<h1>Importação e Exportação de dados<a class="headerlink" href="#importacao-e-exportacao-de-dados" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p>Exportação de dados;</p></li>
+<li><p>Identificadores externos;</p></li>
+<li><p>Importação de dados;</p></li>
+<li><p>Alteração de dados em Massa;</p></li>
+</ul>
+<div class="section" id="exportar-dados-do-odoo">
+<h2>Exportar dados do Odoo<a class="headerlink" href="#exportar-dados-do-odoo" title="Permalink to this headline">¶</a></h2>
+<p>Ao trabalhar com um banco de dados, às vezes é necessário exportar seus
+dados em um arquivo distinto. Fazer isso pode ajudar a fazer relatórios
+sobre suas atividades <strong>(mesmo que o Odoo ofereça uma ferramenta de
+relatório com cada aplicativo disponível).</strong></p>
+<p>Com o Odoo, você pode exportar os valores de qualquer campo em qualquer
+registro.</p>
+<p><strong>Para fazer isso, ative a visualização em lista dos itens que precisam
+ser exportados, clique em</strong>_<strong>Ação</strong>_** e, em seguida, em
+<strong>Exportar</strong>.**</p>
+<img alt="../_images/export1.png" src="../_images/export1.png" />
+<p>Bem simples, essa ação ainda vem com algumas especificidades. Na
+verdade, ao clicar em <em>Exportar</em>, aparece uma janela pop-up com vários
+opções para os dados a serem exportados:</p>
+<div class="figure align-default" id="id3">
+<img alt="Visão geral dos dados que o usuário deseja exportar." src="../_images/export2.png" />
+<p class="caption"><span class="caption-text">Visão geral dos dados que o usuário deseja exportar.</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+<ol class="arabic simple">
+<li><p>Com a opção <em>Quero atualizar os dados</em> marcada, o sistema apenas
+mostra os campos que podem ser importados. Isso é muito útil em caso
+você queira atualizar os registros existentes. Basicamente, isso
+funciona como um filtro. Deixar a caixa desmarcada dá muito mais
+campo opções porque mostra todos os campos, não apenas os que pode
+ser importado.</p></li>
+<li><p>Ao exportar, você pode escolher entre dois formatos: .csv e .xls. Com
+.csv, os itens são separados por vírgula, enquanto .xls contém
+informações sobre todos os planilhas em um arquivo, incluindo
+conteúdo e formatação.</p></li>
+<li><p>Esses são os itens que você pode querer exportar. Use as setas para
+exibir mais opções de subcampo. Claro, você pode usar a barra de
+pesquisa para encontrar campos específicos com mais facilidade. Para
+usar a opção de pesquisa mais eficientemente, exiba todos os campos
+clicando em todos os Setas; flechas!</p></li>
+<li><p>O botão + está lá para adicionar campos à lista “para exportar”.</p></li>
+<li><p>As “alças” ao lado dos campos selecionados permitem mover os campos
+para cima e para baixo para alterar a ordem em que devem ser exibidos
+na exportação Arquivo. #. A lixeira está lá se você precisar remover
+campos.</p></li>
+<li><p>Para relatórios recorrentes, pode ser interessante salvar
+predefinições de exportação. Selecione todos os necessários e clique
+na barra de modelos. Lá, clique em <em>Novo modelo</em> e dê um nome ao seu.
+o da próxima vez que você precisar exportar a mesma lista, basta
+selecionar o modelo relacionado.</p></li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>É bom ter em mente o identificador externo do campo. Por exemplo, <em>Empresa Relacionada</em> é igual a <em>parent_id</em>. Isso ajuda a exportar apenas o que você gostaria de importar em seguida.</p>
+</div>
+</div>
+<div class="section" id="importar-dados-para-o-odoo">
+<h2>Importar dados para o Odoo<a class="headerlink" href="#importar-dados-para-o-odoo" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="como-comecar">
+<h3>Como começar<a class="headerlink" href="#como-comecar" title="Permalink to this headline">¶</a></h3>
+<p>Você pode importar dados em qualquer objeto de negócios do Odoo usando o
+Excel (.xlsx) ou CSV (.csv): contatos, produtos, extratos bancários,
+lançamentos contábeis e até pedidos!</p>
+<p>Abra a visualização do objeto que deseja preencher e clique em
+:menuseselection:<a href="#id1"><span class="problematic" id="id2">`</span></a>Favorites –&gt; Import registros».</p>
+<img alt="../_images/export3.png" src="../_images/export3.png" />
+<p>Lá você recebe modelos que você pode preencher facilmente com seus
+próprios dados. Esses modelos podem ser importados em um clique; O
+mapeamento de dados já está feito.</p>
+</div>
+<div class="section" id="como-adaptar-o-modelo">
+<h3>Como adaptar o modelo<a class="headerlink" href="#como-adaptar-o-modelo" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Adicione, remova e ordene colunas para se adequar melhor à sua
+estrutura de dados.</p></li>
+<li><p>Aconselhamos a não remover o <strong>ID</strong> (veja o motivo na próxima seção).</p></li>
+<li><p>Defina um ID exclusivo para cada registro, arrastando para baixo o
+sequenciamento de ID.</p></li>
+</ul>
+<img alt="../_images/export4.png" src="../_images/export4.png" />
+<ul class="simple">
+<li><p>Quando você adiciona uma nova coluna, o Odoo pode não conseguir
+mapeá-la automaticamente se label não cabe em nenhum campo no Odoo.
+Não se preocupe! Você pode mapear novas colunas manualmente ao testar
+a importação. Pesquise na lista o campo correspondente.</p></li>
+</ul>
+<img alt="../_images/export5.png" src="../_images/export5.png" />
+<p>Em seguida, use o rótulo deste campo em seu arquivo para fazê-lo
+funcionar direto na próxima vez.</p>
+</div>
+<div class="section" id="como-importar-de-outro-aplicativo">
+<h3>Como importar de outro aplicativo<a class="headerlink" href="#como-importar-de-outro-aplicativo" title="Permalink to this headline">¶</a></h3>
+<p>Para recriar relacionamentos entre diferentes registros, você deve usar
+o identificador exclusivo do aplicativo original e mapeie-o para a
+coluna <strong>ID</strong> (ID externo) no Odoo. Quando você importa outro registro
+vinculado ao primeiro, use <strong>XXX/ID</strong> (XXX/ID externo) para o
+identificador exclusivo original. Você também pode encontrar este
+registro usando seu nome, mas ficará preso se pelo menos 2 registros
+tiverem o mesmo nome.</p>
+<p>O <strong>ID</strong> também será usado para atualizar a importação original se você
+precisar reimportar dados modificados posteriormente, é, portanto, uma
+boa prática especificá-lo sempre que possível.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+          <div class="page-nav">
+            <div class="inner"><ul class="page-nav">
+  <li class="prev">
+    <a href="odoo-configuracoes-tecnicas.html"
+       title="previous chapter">← Configurações Técnicas</a>
+  </li>
+</ul><div class="footer" role="contentinfo">
+      &#169; Copyright 2022, KMEE INFORMATICA LTDA.
+    <br>
+    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a> 0.6.1.
+</div>
+            </div>
+          </div>
+      </page>
+    </div>
+    
+    
+  </body>
+</html>

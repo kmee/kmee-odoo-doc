@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+      <title>Treinamento Fiscal</title>
+    
+      <link rel="stylesheet" href="../_static/pygments.css">
+      <!-- bundled in js (rollup iife) -->
+      <!-- <link rel="stylesheet" href="../_static/theme.css"> -->
+      <link rel="stylesheet" href="../_static/sphinx_press_theme.css">
+          <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+          <link rel="stylesheet" href="../_static/css/theme.css " type="text/css" />
+      
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+
+      <!-- sphinx script_files -->
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+
+      
+      <!-- bundled in js (rollup iife) -->
+      <!-- <script src="../_static/theme-vendors.js"></script> -->
+      <script src="../_static/theme.js" defer></script>
+    
+  <link rel="index" title="Index" href="../genindex.html" />
+  <link rel="search" title="Search" href="../search.html" /> 
+  </head>
+
+  <body>
+    <div id="app" class="theme-container" :class="pageClasses"><navbar @toggle-sidebar="toggleSidebar">
+  <router-link to="../index.html" class="home-link">
+    
+      <span class="site-name">Kmee: Treinamento Odoo</span>
+    
+  </router-link>
+
+  <div class="links">
+    <navlinks class="can-hide">
+
+  
+    <div class="nav-item">
+      <a href="../index.html#introducao-ao-odoo"
+         class="nav-link ">
+         introdução ao odoo
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="../index.html#instalando-o-odoo"
+         class="nav-link ">
+         instalando o odoo
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="../index.html#usuario-avancado"
+         class="nav-link ">
+         usuário avançado
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="../index.html#treinamento-funcional"
+         class="nav-link ">
+         treinamento funcional
+      </a>
+    </div>
+  
+
+
+
+    </navlinks>
+  </div>
+</navbar>
+
+      
+      <div class="sidebar-mask" @click="toggleSidebar(false)">
+      </div>
+        <sidebar @toggle-sidebar="toggleSidebar">
+          
+          <navlinks>
+            
+
+  
+    <div class="nav-item">
+      <a href="../index.html#introducao-ao-odoo"
+         class="nav-link ">
+         introdução ao odoo
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="../index.html#instalando-o-odoo"
+         class="nav-link ">
+         instalando o odoo
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="../index.html#usuario-avancado"
+         class="nav-link ">
+         usuário avançado
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="../index.html#treinamento-funcional"
+         class="nav-link ">
+         treinamento funcional
+      </a>
+    </div>
+  
+
+
+
+            
+          </navlinks><div id="searchbox" class="searchbox" role="search">
+  <div class="caption"><span class="caption-text">Quick search</span>
+    <div class="searchformwrapper">
+      <form class="search" action="../search.html" method="get">
+        <input type="text" name="q" />
+        <input type="submit" value="Search" />
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
+  </div>
+</div><div class="sidebar-links" role="navigation" aria-label="main navigation">
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="../index.html#introducao-ao-odoo">introdução ao odoo</a></span>
+      </p>
+      <ul class="">
+        
+          <li class="toctree-l1 "><a href="../introducao-ao-odoo/odoo-comece-por-aqui.html" class="reference internal ">Comece por aqui</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="../introducao-ao-odoo/a-historia-do-odoo.html" class="reference internal ">A história do Odoo</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="../introducao-ao-odoo/a-arquitetura-do-odoo.html" class="reference internal ">A arquitetura do Odoo</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="../introducao-ao-odoo/odoo-community-association.html" class="reference internal ">Odoo Community Association</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="../introducao-ao-odoo/licencas-do-odoo.html" class="reference internal ">Open Source / Open Core</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="../introducao-ao-odoo/testando-o-odoo-sem-precisar-instalar.html" class="reference internal ">Testando o Odoo sem instalar</a>
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="../index.html#instalando-o-odoo">instalando o odoo</a></span>
+      </p>
+      <ul class="">
+        
+          <li class="toctree-l1 "><a href="../instalando-o-odoo/index.html" class="reference internal ">Introdução</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="../instalando-o-odoo/instalando-o-odoo-no-linux-com-o-instalador-deb.html" class="reference internal ">Instalando o Odoo no linux com o instalador .deb</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="../instalando-o-odoo/instalando-o-odoo-no-windows-com-o-instalador-exe.html" class="reference internal ">Instalando o Odoo no windows com o instalador .exe</a>
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="../index.html#usuario-avancado">usuário avançado</a></span>
+      </p>
+      <ul class="">
+        
+          <li class="toctree-l1 "><a href="../usuario-avancado-odoo/odoo-entendendo-a-interfaces-de-usuario.html" class="reference internal ">Interfaces de usuário</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="../usuario-avancado-odoo/odoo-configuracoes-basicas.html" class="reference internal ">Configurações básicas</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="../usuario-avancado-odoo/odoo-configuracoes-tecnicas.html" class="reference internal ">Configurações Técnicas</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="../usuario-avancado-odoo/odoo-importacao-e-exportacao-de-dados.html" class="reference internal ">Importação e Exportação de dados</a>
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="../index.html#treinamento-funcional">treinamento funcional</a></span>
+      </p>
+      <ul class="">
+        
+      </ul>
+    </div>
+  
+</div>
+        </sidebar>
+
+      <page>
+          <div class="body-header" role="navigation" aria-label="navigation">
+  
+  <ul class="breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+    
+    <li>Treinamento Fiscal</li>
+  </ul>
+  
+
+  <ul class="page-nav">
+</ul>
+  
+</div>
+<hr>
+          <div class="content" role="main" v-pre>
+            
+  <div class="section" id="treinamento-fiscal">
+<h1>Treinamento Fiscal<a class="headerlink" href="#treinamento-fiscal" title="Permalink to this headline">¶</a></h1>
+<p><strong>Treinamento Fiscal Odoo</strong></p>
+<p><strong>Roadmap Fiscal</strong></p>
+<p><strong>Semana 01</strong> (1x /sem)</p>
+<ul class="simple">
+<li><p>Etapa 01 (01/04/2022): Configurações Gerais de Impostos</p>
+<ul>
+<li><p>PIS / COFINS</p></li>
+<li><p>IPI</p></li>
+<li><p>ISSQN</p></li>
+<li><p>CSLL</p></li>
+<li><p>IRPJ</p></li>
+<li><p>INSS</p></li>
+</ul>
+</li>
+</ul>
+<p>OBS: No nível mais geral, configuramos os impostos da empresa, esses
+serão carregados automaticamente pelo sistema, sendo sobrescritos pelos
+impostos dos casos particulares, quando algum se encaixar</p>
+<p><strong>Semana 02</strong> (1x /sem)</p>
+<ul class="simple">
+<li><p>Etapa 02 (07/04/2022): Cadastro de NCM’s</p>
+<ul>
+<li><p>IPI</p></li>
+<li><p>II</p></li>
+</ul>
+</li>
+</ul>
+<p>OBS: O primeiro nível é o NCM. Esse registro é responsável pela
+definição dos impostos referentes ao IPI e ao II.</p>
+<p><strong>Semana 03</strong> (2x /sem)</p>
+<ul class="simple">
+<li><p>Etapa 03 (13/04/2022): Regulamento do ICMS parte 1</p>
+<ul>
+<li><p>ICMS</p></li>
+</ul>
+</li>
+<li><p>Etapa 04 (14/04/2022): Regulamento do ICMS parte 2</p>
+<ul>
+<li><p>ICMS ST</p></li>
+<li><p>ICMS FCP</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>Semana 04</strong> (2x /sem)</p>
+<ul class="simple">
+<li><p>Etapa 05 (20/04/2022): Linhas de Operação</p></li>
+<li><p>Etapa 06 (27/04/2022): CFOP</p></li>
+</ul>
+<p><strong>Semana 05</strong> (1x /sem)</p>
+<ul class="simple">
+<li><p>Etapa 07 (29/04/2022): Perfil fiscal do parceiro</p></li>
+</ul>
+<p><strong>Introdução</strong></p>
+<p>As configurações fiscais funcionam em ordem decrescente de
+generalidade,ou seja, configura-se do caso mais geral para o caso mais
+particular.</p>
+<p>Para tomar a decisão sobre quais impostos incidem sobre os itens
+fiscais, o sistema se utiliza de um registro chamado Definição de
+Imposto.</p>
+<p>No nível mais geral, configuramos os impostos da empresa. Esses serão os
+impostos carregados automaticamente pelo sistema, sendo sobrescritos
+pelos impostos dos casos particulares, quando algum se encaixar.</p>
+<p>No caso da empresa ser do Simples Nacional, as configurações dos
+impostos de saída na empresa serão suficientes. Uma vez definidos em
+qual faixa e anexo a empresa se enquadra, os mesmos impostos serão
+aplicados em todas as operações de saída</p>
+<p>Caso contrário, se a empresa for do regime normal, a decisão de quais
+impostos aplicar passa por outros níveis de configuração até chegar na
+decisão final. Em cada nível de decisão, aplicam-se os impostos
+especificados nas definições de impostos, se elas forem válidas no caso
+atual.</p>
+<p>O primeiro nível é o NCM. Esse registro é responsável pela definição dos
+impostos referentes ao IPI e ao II, esse último apenas no caso de uma
+exportação. Esse nível de decisão é o único que não utiliza registros de
+definição de imposto para operar. A definição dos impostos IPI e II é
+feita diretamente no cadastro do registro de NCM.</p>
+<p>O segundo nível é o regulamento do ICMS. Esse registro é responsável
+pela definição dos impostos de ICMS, ICMS ST e ICMS FCP.</p>
+<p>O terceiro nível é a linha da operação. Esse registro pode sobrescrever
+todo e qualquer imposto dos níveis superiores, inclusive os relativos ao
+ICMS. Também é responsável por especificar a CFOP do item.</p>
+<p>O quarto nível é a própria CFOP. Assim como as linhas da operação, as
+definições de imposto da CFOP podem sobrescrever quaisquer decisões de
+impostos tomadas em etapas anteriores. Seu uso é menos comum, pois na
+maioria dos casos as definições da linha da operação são suficientes.
+Porém, podem haver casos específicos em que impostos diferentes devam
+ser aplicados para CFOPs diferentes dentro de uma mesma linha de
+operação.</p>
+<p>O último nível é o perfil fiscal do parceiro. Ele também tem o poder de
+sobrescrever as decisões de impostos dos níveis anteriores. Mas com esse
+registro é necessário cautela redobrada, pois uma definição de imposto
+aqui valerá para todos os parceiros com o mesmo perfil fiscal.</p>
+<p><strong>Hierarquia de parametrização</strong></p>
+<img alt="../_images/1" src="../_images/1" />
+<hr class="docutils" />
+<p><strong>Moedas:</strong></p>
+<ul class="simple">
+<li><p>Dólar</p></li>
+<li><p>Real</p></li>
+</ul>
+<p><strong>Serviços e Produtos</strong></p>
+<ul class="simple">
+<li><p>Produção própria</p></li>
+<li><p>Revenda</p></li>
+<li><p>Industrialização a terceiros</p></li>
+</ul>
+<p><strong>Emissão de notas:</strong></p>
+<ul class="simple">
+<li><p>Emissão de notas conforme legislação Brasileira</p></li>
+<li><p>Considerar que trabalham com serviços e venda de produtos</p></li>
+<li><p>Fazem importações</p></li>
+</ul>
+<p><strong>Código do Regime Tributário (CRT)</strong></p>
+<ul class="simple">
+<li><p>3 - Regime Normal</p></li>
+</ul>
+<p><strong>Cálculo de Lucro</strong></p>
+<ul class="simple">
+<li><p>Presumido</p></li>
+</ul>
+<p><strong>É industria?</strong></p>
+<ul class="simple">
+<li><p>Sim</p></li>
+</ul>
+<p><strong>Tipo de Indústria:</strong> Validar</p>
+<ul class="simple">
+<li><p>02 - Industrial - Montagem</p></li>
+</ul>
+<p><strong>CNAE Principal:</strong></p>
+<ul class="simple">
+<li><ul>
+<li><p>2610-8/00 - Fabricação de Componentes Eletrônicos</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>CNAE Secundário:</strong></p>
+<ul class="simple">
+<li><ul>
+<li><p>7490-1/99 - Outras atividades profissionais, científicas e
+técnicas não especificadas anteriormente</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>PIS/COFINS:</strong> Regime de Incidência Cumulativa PIS 0,65% e Cofins 3,00%</p>
+<p><strong>ISSQN:</strong> 5%</p>
+<p><strong>IRPJ - Vendas:</strong> Valor Total x 8% e o resultado x 15% = 1,2%</p>
+<p><strong>CSLL - Vendas:</strong> Valor Total x 12% e o resultado x 9% = 1,08%</p>
+<p><strong>IRPJ - Serviços:</strong> Valor Total x 32% e o resultado x 15% = 4,8%</p>
+<p><strong>CSLL - Serviços:</strong> Valor Total x 32% e o resultado x 9% = 2,88%</p>
+<p><strong>Nível 0: Configurações Fiscais da Empresa</strong></p>
+<p>Nota: Levando em consideração que a Empresa possui operação de venda de
+produto e serviço, os impostos como IRPJ, CSLL serão parametrizados no
+nível 3: Linha de Operação. No nível zero devemos nos atentar apenas ao
+PIS/COFINS</p>
+<img alt="../_images/2" src="../_images/2" />
+<img alt="../_images/3" src="../_images/3" />
+<p><strong>Aba regime tributário</strong></p>
+<img alt="../_images/4" src="../_images/4" />
+<p>Regime Tributário: Se a empresa é do Simples Nacional ou do Regime
+Normal.</p>
+<div class="section" id="regime-normal">
+<h2><strong>Regime Normal</strong><a class="headerlink" href="#regime-normal" title="Permalink to this headline">¶</a></h2>
+<p>Caso a empresa for do regime normal, alguns campos adicionais devem ser
+configurados.</p>
+<img alt="../_images/5" src="../_images/5" />
+<p>Cálculo de Lucros: Se a empresa é do Lucro Real, Presumido ou
+Arbitrário.</p>
+<p>É indústria: Se a empresa é uma indústria.</p>
+<p>Tipo de Indústria: Se for indústria, especificar o tipo da instalação
+industrial.</p>
+</div>
+<div class="section" id="cnae">
+<h2><strong>CNAE</strong><a class="headerlink" href="#cnae" title="Permalink to this headline">¶</a></h2>
+<p>Configurar a atividade principal e secundárias da empresa.</p>
+<img alt="../_images/6" src="../_images/6" />
+<p><strong>Aba Impostos</strong></p>
+<img alt="../_images/7" src="../_images/7" />
+<p>Nessa aba são configurados os impostos padrão, assim como os regimes e
+regulamentos fiscais aos quais a empresa é submetida.</p>
+</div>
+<div class="section" id="pis-cofins">
+<h2><strong>PIS/COFINS</strong><a class="headerlink" href="#pis-cofins" title="Permalink to this headline">¶</a></h2>
+<img alt="../_images/8" src="../_images/8" />
+<p>PIS/COFINS: O regime de incidência dos impostos PIS e COFINS.</p>
+<p>PIS RET Padrão: O imposto de retenção padrão do PIS.</p>
+<p>COFINS RET Padrão: O imposto de retenção padrão do COFINS.</p>
+</div>
+<div class="section" id="ipi">
+<h2><strong>IPI</strong><a class="headerlink" href="#ipi" title="Permalink to this headline">¶</a></h2>
+<img alt="../_images/9" src="../_images/9" />
+<p>IPI Padrão: O imposto IPI padrão a ser aplicado.</p>
+<img alt="../_images/10" src="../_images/10" />
+<p>RIPI: Se marcado, o imposto IPI a ser aplicado será decidido a partir da
+NCM do produto e da operação fiscal.</p>
+</div>
+<div class="section" id="icms">
+<h2><strong>ICMS</strong><a class="headerlink" href="#icms" title="Permalink to this headline">¶</a></h2>
+<img alt="../_images/11" src="../_images/11" />
+<p>Regulamento do ICMS: O regulamento de ICMS a ser usado, se a empresa for
+do regime normal.</p>
+</div>
+<div class="section" id="issqn">
+<h2><strong>ISSQN</strong><a class="headerlink" href="#issqn" title="Permalink to this headline">¶</a></h2>
+<img alt="../_images/12" src="../_images/12" />
+<p>ISSQN Padrão: O imposto ISSQN padrão a ser aplicado.</p>
+<p>ISSQN RET Padrão: O imposto de retenção de ISSQN padrão a ser aplcado.</p>
+</div>
+<div class="section" id="csll-irpj-e-inss">
+<h2><strong>CSLL, IRPJ e INSS</strong><a class="headerlink" href="#csll-irpj-e-inss" title="Permalink to this headline">¶</a></h2>
+<img alt="../_images/13" src="../_images/13" />
+<p>As mesmas definições feitas no ISSQN podem ser feitas nos demais
+impostos.</p>
+</div>
+<div class="section" id="impostos-avancados">
+<h2><strong>Impostos avançados</strong><a class="headerlink" href="#impostos-avancados" title="Permalink to this headline">¶</a></h2>
+<img alt="../_images/14" src="../_images/14" />
+<p>Como resultado das configurações de impostos por meio dos campos
+específicos de cada tipo de imposto, ao salvar o cadastro da empresa,
+serão criadas definições de impostos. Podem ser criadas outras
+definições manualmente nesse campo.</p>
+<p><strong>Aba Estoque</strong></p>
+<img alt="../_images/15" src="../_images/15" />
+<p>Nessa aba são configuradas as operações fiscais padrão a serem usadas
+nas operações de estoque.</p>
+<img alt="../_images/16" src="../_images/16" />
+<div class="section" id="aba-vendas">
+<h3><strong>Aba Vendas</strong><a class="headerlink" href="#aba-vendas" title="Permalink to this headline">¶</a></h3>
+<img alt="../_images/17" src="../_images/17" />
+<p>Assim como na aba estoque, podem ser definidas operações padrão para
+vendas comuns e vendas para consumo final.</p>
+<img alt="../_images/18" src="../_images/18" />
+<p>Além disso, pode-se escolher se as observações da venda serão
+automaticamente copiadas para as faturas.</p>
+</div>
+<div class="section" id="aba-certificados">
+<h3><strong>Aba Certificados</strong><a class="headerlink" href="#aba-certificados" title="Permalink to this headline">¶</a></h3>
+<img alt="../_images/19" src="../_images/19" />
+</div>
+</div>
+<div class="section" id="certificado">
+<h2><strong>Certificado</strong><a class="headerlink" href="#certificado" title="Permalink to this headline">¶</a></h2>
+<img alt="../_images/20" src="../_images/20" />
+<p>Para que seja possível emitir documentos fiscais é necessário configurar
+os certificados digitais da empresa. O sistema atualmente suporta o
+certificado A1. Para preencher, basta clicar na seta do campo NFe e
+clicar em “Criar e Editar…”:</p>
+<p>Após fazer o upload do arquivo no formato PFX e inserir a senha, ao
+salvar o registro, o sistema valida o certificado. Em caso de falha, uma
+mensagem aparecerá na tela.</p>
+<div class="section" id="aba-documentos-eletronicos">
+<h3><strong>Aba Documentos Eletrônicos</strong><a class="headerlink" href="#aba-documentos-eletronicos" title="Permalink to this headline">¶</a></h3>
+<p>Nessa aba ficam as configurações relacionadas aos documentos que podem
+ser transmitidos eletronicamente.</p>
+<p>Processador documentos eletrônicos: “erpbrasil.edoc” deve ser escolhido
+para a emissão de documentos pelo sistema. Se for escolhida a opção
+“Nenhum”, os documentos irão para a situação “Autorizado” ao clicar em
+enviar, mas o sistema assumirá que a nota foi emitida por terceiros.</p>
+<p>Documento Fiscal Padrão: O tipo de documento padrão que a empresa emite.</p>
+</div>
+<div class="section" id="aba-nf-e">
+<h3><strong>Aba NF-e</strong><a class="headerlink" href="#aba-nf-e" title="Permalink to this headline">¶</a></h3>
+<p>Nessa aba ficam as informações relativas à emissão da nota fiscal.</p>
+<p>Versão da NF-e: A versão oficial do documento.</p>
+<p>Ambiente da NF-e: O ambiente em que as notas serão emitidas (“Produção”
+ou “Homologação”).</p>
+<p>Série Padrão da NF-e: A série que as notas devem ser emitidas.</p>
+<p>~</p>
+<p id="section-1">~</p>
+<p id="section-2">~</p>
+</div>
+<div class="section" id="nivel-01-ncm">
+<h3><strong>Nível 01: NCM</strong><a class="headerlink" href="#nivel-01-ncm" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="especificacoes-gerais">
+<h3><strong>Especificações gerais</strong><a class="headerlink" href="#especificacoes-gerais" title="Permalink to this headline">¶</a></h3>
+<p>Código: Código do NCM, no formato “9999.99.99”.</p>
+<p>Nome: Nome por extenso do NCM.</p>
+<p>Exceção: Caso se trate de uma exceção dentro de um NCM, além de
+especificar isso no nome é necessário preencher o número da exceção
+nesse campo.</p>
+<p>IPI: Imposto IPI a ser aplicado à itens com produtos pertencentes ao
+NCM.</p>
+<p>II: Imposto II a ser aplicado à itens com produtos pertencentes ao NCM.</p>
+<p>UoM de Exportação: Unidade de medida a ser usada na exportação.</p>
+<p><strong>Validação dos impostos e produtos vinculados por NCM</strong></p>
+<p><strong>Passo 01:</strong> Acessar o Módulo Fiscal</p>
+<p><strong>Passo 02:</strong> Acessar NCMs</p>
+<p><strong>Passo 03:</strong> Pesquise pela NCM no qual deseja validar se está
+cadastrada no sistema, assim como seus impostos de IPI e II.</p>
+<p>Digite no seguinte formato: “84313110”</p>
+<p><strong>Passo 04:</strong> Valide os impostos, nome e código, bem como os produtos
+vinculados. Caso tenha divergência no valor do IPI ou II, basta clicar
+em cima da tributação.</p>
+<p>Nota: Caso exista algum produto que não esteja na lista do NCM, a
+alteração deverá ser feita no Módulo Inventário &gt; Dados Principais &gt;
+Produtos e selecionar o produto que necessita de alteração.</p>
+<p><strong>Passo 05:</strong> Editando um imposto</p>
+<p><strong>Passo 06:</strong> Caso o registro de imposto não exista, poderá ser criado
+um novo registro de IPI / II clicando em “Criar e editar”</p>
+<p>Feito isso, clique em salvar e a nova tributação estará criada.</p>
+<p><strong>Cadastro de NCMs não existentes na tabela original da localização
+Brasileira</strong></p>
+<p>Exemplo de NCM faltante: 85411032</p>
+<p><strong>Passo 01</strong>: Dar acesso ao responsável pelo cadastramento.</p>
+<p>Configurações &gt; User &amp; Companies &gt; Usuários &gt; Selecionar responsável
+pelo cadastramento</p>
+<p><strong>Passo 02:</strong> Marcar a opção de “Maintenance de Dados Fiscais”</p>
+<p><strong>Passo 03:</strong> Entrar no Módulo Fiscal, Configuração, NCM</p>
+<p><strong>Passo 04:</strong> Buscar a NCM mais próxima da que se deseja criar</p>
+<p><strong>Passo 05:</strong> Exportar para Excel</p>
+<p><strong>Passo 06:</strong> Abrir o arquivo excel, alterar os itens marcados em
+vermelho, para a descrição desejada, número e tributação efetiva do NCM</p>
+<p><strong>Atenção</strong> especial, para os campos:</p>
+<p>Deve-se alterar para o código que representa o percentual da tributação
+do NCM.</p>
+<ul class="simple">
+<li><p>tax_ipi_id -&gt; % do IPI - “l10n_br_fiscal.tax_ipi_2” (2%)</p></li>
+<li><p>tax_ii_id -&gt; % do II “ l10n_br_fiscal.tax_ii_0” (0%)</p></li>
+</ul>
+<p><strong>Passo 07:</strong> Arquivo excel “Alterado” com novos dados</p>
+<p><strong>Passo 08:</strong> Clique em “Importar”</p>
+<p><strong>Passo 09:</strong> Carregar o Arquivo modificado</p>
+<p><strong>Passo 10:</strong> Visualizar os dados de importação do NCM e testar a
+importação</p>
+<p><strong>Passo 11:</strong> Uma vez validado, pode-se clicar em “Importar”</p>
+<p>E isso é tudo para esse processo.</p>
+<p>Lembrando que o arquivo excel tem o ID Externo (rota) que permite
+importar mais campos, tantos quantos o usuário definiu no momento da
+exportação.</p>
+<p><strong>Nível 2: Cadastro de uma tributação de ICMS específica por NCM</strong></p>
+<p>Nota 01: A configuração de uma tributação de saída exemplificada abaixo,
+pode ser utilizada como modelo para efetuar a parametrização de outra
+tributação específica por um NCM específico, como por exemplo uma
+redução de alíquota.</p>
+<p><strong>Passo 01:</strong> Validar cadastro do produto com a NCM correta</p>
+<p><strong>Passo 02:</strong> No módulo Fiscal, ir em Configuração &gt; Regulamento do ICMS</p>
+<p><strong>Passo 03:</strong> Editar o estado que se deseja configurar o ICMS, São Paulo
+neste caso</p>
+<p><strong>OBS:</strong> Notar que o Odoo já possui algumas configurações padrão, basta
+alterá-las para adaptação à operação da empresa.</p>
+<p><strong>Passo 04:</strong> Clicar em “Adicionar uma Linha”</p>
+<p><strong>Passo 05:</strong> Acessar o menu de criação de Nova Tributação</p>
+<p><strong>Passo 06:</strong> Criar ou adicionar Tributação Nova e CST’s</p>
+<p><strong>Passo 07:</strong> Detalhes da criação da nova tributação</p>
+<p><strong>Passo 08:</strong> Informar o Estado onde se aplica a nova legislação criada</p>
+<p><strong>Passo 09:</strong> Informar o NCM que se deseja tributar</p>
+<p>Nota: Caso queira inserir mais de um NCM, basta separá-los por vírgula (
+“,” )</p>
+<p><strong>Passo 10:</strong> Confirmar Aprovação da nova regra criada</p>
+<p><strong>Passo 11:</strong> Revisar e Salvar</p>
+<p><strong>Passo 12:</strong> Aprovar e salvar para mudar o status para “Aprovado” e o
+motor de impostos do odoo passar a usar a regra</p>
+<p>Menu final após a conclusão da criação da nova regra</p>
+<p><strong>Cadastro de uma regra ICMS com redução de alíquota</strong></p>
+<p><strong>Passo 01:</strong> Acesse o regulamento ICMS e adicione uma nova linha</p>
+<p><strong>Passo 02:</strong> Caso não exista o cadastro do imposto com redução, basta
+criar</p>
+<p><strong>Passo 03:</strong> Preencha o nome do imposto conforme o padrão “ICMS 18% Com
+Red. 61,11%” e também os demais campos conforme abaixo:</p>
+<p><strong>Passo 04:</strong> Insira o estado destino</p>
+<p><strong>Passo 05:</strong> Insira o NCM no qual se aplica a redução de alíquota,
+utilizaremos como exemplo o “85437099”</p>
+<p><strong>Passo 06:</strong> Sempre lembrar de Revisar e Aprovar o imposto criado</p>
+<p><strong>Cadastro de uma regra ICMS com Substituição Tributária</strong></p>
+<p>Nota: Diferentemente do cadastro de uma regra de ICMS comum, uma regra
+de ICMS com Substituição Tributária deverá ser parametrizada a nível de
+linha de operação e não pelo regulamento de ICMS como mostra a abaixo</p>
+<p>Portanto, para configuração de uma regra ICMS ST, seguiremos os
+seguintes passos:</p>
+<p><strong>Passo 01:</strong> Acesse o módulo Fiscal</p>
+<p><strong>Passo 02:</strong> Acesse a configuração das operações</p>
+<p>Nota: Cada operação pode ter linhas de operação, como exemplo a operação
+“Venda”, pode ter a linha de operação “Venda com Substituição
+Tributária”. Portanto, antes de configurar a linha de operação com ST,
+selecione a operação Pai.</p>
+<p>Neste exemplo, faremos a parametrização de Venda de produto com ST</p>
+<p><strong>Passo 01:</strong> Lembre sempre de voltar a operação para provisório para
+poder editar</p>
+<p><strong>Passo 02:</strong> Na aba “Linha de Operação”, clique em adicionar mais uma
+linha</p>
+<p><strong>Passo 03:</strong> Configure conforme descrito abaixo</p>
+<p><strong>Passo 04:</strong> Na aba “Definições Fiscais”, defina as tributações</p>
+<p>Nota: Para o compreendimento do sistema, precisaremos criar duas regras
+de tributação para cada alíquota, sendo elas:</p>
+<ul class="simple">
+<li><p>ICMS: No qual será responsável por definir o CST = 10</p></li>
+<li><p>ICMS ST: No qual será responsável por definir o IVA/MVA</p></li>
+</ul>
+<p>Iremos utilizar o exemplo de ICMS ST 13.3%</p>
+<p><strong>Passo 05:</strong> Criando a regra ICMS</p>
+<p><strong>Passo 06:</strong> Pesquise pelo ICMS no qual deseja, no caso “ICMS ST 13.3%”</p>
+<p><strong>Passo 07:</strong> Caso não existe, opte pela opção “Criar e editar”</p>
+<p><strong>Passo 08</strong>: Insira o NCM respectivo e salve a regra ICMS</p>
+<p><strong>Passo 09:</strong> Agora criaremos a Regra ICMS ST responsável por carregar o
+valor do IVA/MVA</p>
+<p><strong>Passo 10:</strong> Preencha os campos e cria uma nova regra de MVA/IVA caso
+necessário</p>
+<p><strong>Passo 11:</strong> Criando uma regra com MVA/IVA</p>
+<p><strong>Passo 12:</strong> Inclua o NCM no qual se deseja aplicar tal regra</p>
+<p>Feito isso, a linha de operação com ST estará criada, basta salvar,
+revisar e aprovar.</p>
+<p>Feito isso, está concluído o registro de uma regra ICMS com ST. Para o
+cadastro de novas regras ICMS com ST, elas deverão ser feitas dentro da
+mesma linha de operação, no caso “Venda ST”</p>
+<p><strong>Diferença de alíquota do ICMS (DIFAL)</strong></p>
+<p>O DIFAL não necessita de parametrização no Odoo, o sistema já faz o
+tratamento a partir de 3 fatores:</p>
+<ul class="simple">
+<li><p>Tabela ICMS</p></li>
+<li><p>Consumidor final não contribuinte</p></li>
+<li><p>Venda para fora do estado</p></li>
+</ul>
+<p>Segue exemplo de venda abaixo:</p>
+<p>Na aba “Impostos”&gt;”ICMS”, podemos verificar o cálculo do DIFAL</p>
+</div>
+<div class="section" id="nivel-03-operacao-linha-de-operacao">
+<h3><strong>Nível 03: Operação / Linha de Operação</strong><a class="headerlink" href="#nivel-03-operacao-linha-de-operacao" title="Permalink to this headline">¶</a></h3>
+<p>O nível 3 é dividido em Operação e o subnível Linha de Operação.</p>
+<p>O objetivo da configuração da Operação é definir 3 variáveis:</p>
+<ul class="simple">
+<li><p>Definir se é uma operação de entrada ou saída</p></li>
+<li><p>Definir se é uma operação para consumo final</p></li>
+<li><p>Unidade de Preço, sendo ele preço de Venda e preço de Custo</p></li>
+</ul>
+<p>A linha de operação se comporta como filtros no qual irá avaliar 2
+variáveis:</p>
+<ul class="simple">
+<li><p>Se é um produto acabado ou produto de revenda</p></li>
+<li><p>Se o parceiro é contribuinte ou não do ICMS</p></li>
+</ul>
+<p>Nota: Quanto mais campos preenchidos na configuração da Operação e Linha
+de Operação, mais preciso será os filtros. Pois quando não existir um
+imposto configurado em linha de operação, ele será buscado no
+regulamento do ICMS.</p>
+</div>
+<div class="section" id="nivel-04-cfop">
+<h3><strong>Nível 04: CFOP</strong><a class="headerlink" href="#nivel-04-cfop" title="Permalink to this headline">¶</a></h3>
+<p>É possível configurar impostos em um nível mais baixo que a linha de
+operação. Este nível é o nível de CFOP.</p>
+<p>Neste nível é possível que existam configurações fiscais diferentes para
+os CFOPs interno, externo e de exportação da operação. Logo, é possível,
+por exemplo, que para operações de venda, uma venda para dentro do
+Estado (CFOP 5101) tenha uma configuração fiscal diferente de uma venda
+para fora do Estado (CFOP 6101).</p>
+<p>Apesar deste nível possibilitar este tipo de flexibilidade é necessário
+cuidado, pois uma vez feita a configuração de impostos a nível de CFOP,
+todas as linhas de operação que possuírem aquele CFOP utilizaram a nova
+configuração.</p>
+<p>Por exemplo, para o CFOP 5101, as linhas de Venda e Venda não
+Contribuinte das operações de Venda e Venda de Consumo Final, utilizam o
+mesmo CFOP. Caso fosse realizada uma configuração fiscal no CFOP 5101,
+todas estas linhas de operação seriam afetadas.</p>
+<p>Além disso, mesmo que toda a configuração fiscal seja feita a nível de
+CFOP, os filtros da linhas de operação ainda devem ser configurados de
+forma correta, pois é através deles que o Odoo toma a decisão de qual
+CFOP escolher.</p>
+</div>
+<div class="section" id="casos-de-uso">
+<h3><strong>Casos de Uso</strong><a class="headerlink" href="#casos-de-uso" title="Permalink to this headline">¶</a></h3>
+<p>Nota: É essencial que o cadastro de todos os produtos e de todos os
+cliente esteja configurado de maneira correta, pois qualquer erro nesses
+cadastros resultará em um erro no cálculo dos impostos</p>
+<p><strong>1- Configurações de produtos:</strong></p>
+<p>Todos os produtos terão o mesmo NCM, de modo a mostrar de forma clara o
+processo de seleção de impostos do Odoo.</p>
+<p>Além disso, estão sendo preenchidos apenas os campos obrigatórios e os
+campos utilizados pelo motor fiscal. O cadastro real dos produtos e dos
+parceiros deve ser muito mais completo.</p>
+<p><strong>Produto fabricado pela empresa, sem ocorrência de ST</strong></p>
+<p>Nota: Produtos fabricados pela empresa devem ter o Tipo Fiscal ‘produto
+acabado’.</p>
+<p>Essa configuração será utilizada para fazer a seleção de linha de
+operação entre venda, revenda ou serviço.</p>
+<p>O campo Tax Regulation de produtos que não têm ST deve ser deixado em
+branco.</p>
+<p><strong>Produto de revenda, sem ocorrência de ST</strong></p>
+<p>Nota: Produtos de revenda devem ter o ‘Tipo Fiscal’ mercadoria de
+revenda. E esta é a única diferença entre produtos fabricados e
+mercadorias de revenda.</p>
+<p><strong>Produto fabricado pela empresa, com ST</strong></p>
+<p>Nota: A configuração é quase a mesma do produto fabricado sem ST, a
+única diferença estará no campo ‘Tax Regulation’ que aqui será
+preenchido com o valor Regulamento ICMS ST</p>
+<p><strong>Produto de revenda, com ST</strong></p>
+<p>Nota: O mesmo vale para o produto de revenda com ST. A configuração é a
+mesma do produto de revenda sem ST, à parte do campo Tax Regulation.</p>
+<p><strong>2- Configuração de parceiros</strong></p>
+<p><strong>Parceiro de SP e contribuinte do ICMS</strong></p>
+<p>Para os testes realizados, os perfis Contribuinte e Contribuinte Simples
+Nacional são equivalentes, pois as linhas de operação ‘Venda’ e ‘Venda
+não Contribuinte’ não fazem diferenciação através do regime do parceiro.
+Porém, caso exista alguma linha de operação que seja diferenciada pelo
+regime do parceiro, estes perfis resultarão em cálculos de impostos
+diferentes.</p>
+<p>Nota: Clientes contribuintes do ICMS devem ser marcados como empresa, e
+clientes não contribuintes devem ser marcados como Indivíduos.</p>
+<p><strong>Parceiro de SP e não contribuinte do ICMS</strong></p>
+<p><strong>Parceiro de fora de SP e contribuinte do ICMS</strong></p>
+<p><strong>Parceiro de fora de SP e não contribuinte do ICMS</strong></p>
+<p><strong>Caso de Uso 1: Venda de produto acabado sem ST para parceiro
+contribuinte de SP</strong></p>
+<p>No módulo Vendas cria-se uma nova cotação, e seleciona-se o parceiro
+contribuinte de SP e a operação de Venda.</p>
+<p>Ao selecionar-se um produto, serão preenchidos automaticamente os campos
+‘Linha de Operação’ e ‘CFOP’. Neste caso, como o parceiro não é
+contribuinte e o produto é fabricado e não possui ST, foi selecionada a
+Linha de Operação ‘Venda’, e como o parceiro é do mesmo estado da
+empresa, foi selecionado o CFOP interno da linha de operação, neste caso
+o 5101.</p>
+<p>Se verificarmos as definições de impostos da linha de operação ‘Venda’
+da operação ‘Venda’, observaremos que o NCM do nosso produto está
+cadastrado na lista de NCMs do imposto ICMS 18% com Redução de 51,11% da
+base de cálculo. (Obs: Neste ponto eu percebi que tinha colocado o NCM
+errado no cadastro dos produtos, então voltei lá e os troquei, assim há
+uma pequena inconsistência no manual entre o número do NCM dos produtos
+na parte de cadastro de produto e o número do NCM dos produtos desta
+seção em diante).</p>
+<p>Logo se abrirmos a aba ICMS na janela da venda, veremos que o ICMS 18%
+com red de 51,11% foi selecionado automaticamente. Além disso, como a
+operação acontece apenas dentro de SP, não há Difal nem FCP.</p>
+<p>Além disso, podemos ver que a alíquota de IPI do cadastro do NCM foi
+selecionada automaticamente e que o PIS e o COFINS do cadastro geral da
+empresa também.</p>
+<p><strong>Caso de Uso 2: Venda de produto acabado com ST para parceiro
+contribuinte de fora de SP</strong></p>
+<p>Neste caso, vemos que a linha de operação selecionada foi a ‘Venda ST’,
+visto que esta linha de operação filtra produtos que possuem a opção
+‘Regulamento ICMS ST’ em seu cadastro. Além disso, como o parceiro é de
+fora de SP o CFOP selecionado foi o 6401.</p>
+<p>Verificando a aba ICMS vemos que foi selecionado o ICMS 13,3% com ST
+para o ICMS padrão e o ICMS 13,3% MVA 41%, assim como consta para o NCM
+do nosso produto nas definições de imposto da linha de operação. O ICMS
+FCP e Difal continuam em branco, dado que o parceiro é contribuinte do
+ICMS.</p>
+<p><strong>Caso de Uso 3: Revenda para parceiro não contribuinte de fora de SP</strong></p>
+<p>Ao selecionar o produto, a linha de operação é preenchida
+automaticamente com ‘Revenda não Contribuinte’, pois o produto é um
+‘produto acabado’ e o parceiro é não contribuinte, além disso, o CFOP é
+preenchido com o valor 6108, uma vez que o parceiro é de fora do Estado.</p>
+<p>Na aba ICMS vemos que, como não há definição de imposto ICMS para a
+linha de operação Revenda não Contribuinte, foi puxado o valor
+registrado no Regulamento de ICMS para uma operação com origem em SP e
+destino no PR, ou seja, 12%.</p>
+<p>Além disso, esta operação é suscetível à cobrança de ICMS Difal e FCP. O
+difal é calculado de maneira automática a partir da tabela de ICMS
+interno e externo de cada estado. Já o FCP será incluído caso haja um
+cadastro deste imposto na aba outros do estado de origem no regulamento
+de ICMS.</p>
+<p>Além disso, na linha de operação de ‘Revenda não Contribuinte’, foi
+cadastrado o imposto IPI NT, uma vez que o IPI não é cobrado em
+revendas. Assim, se abrirmos a aba IPI na venda, veremos que o imposto
+IPI NT estará selecionado.</p>
+<p><strong>Caso de Uso 4: Operação de Serviço de Industrialização</strong></p>
+<p>Para decidir qual a linha de operação será utilizada, o Odoo checa as
+linhas de operação cadastradas para a operação selecionada na Ordem de
+Compra. Esta operação deve ser selecionada manualmente durante a criação
+da OC.</p>
+<p>Este passo deve ser feito de forma manual pois é possível que exista um
+caso no qual uma transação do mesmo produto com o mesmo parceiro ocorra
+através de um CFOP diferente (5101, 5124 ou 5125, por exemplo). Neste
+caso não há como o Odoo saber qual deles deve ser selecionado, e
+consequentemente qual linha de operação selecionar.</p>
+<p>Quando uma operação diferente é selecionada na OC, as possíveis linhas
+de operação (e consequentemente definições fiscais) são aquelas que
+estão dentro do cadastro da operação selecionada.</p>
+<p>No caso de ‘Serviço de Industrialização’ há apenas uma linha de operação
+cadastrada, então ela será a única linha de operação selecionável na OC.
+Mas cuidado, caso os filtros desta linha de operação estejam
+configurados de forma que ela não seja selecionada para algum tipo de
+produto ou parceiro, uma venda com operação ‘Serviço de
+Industrialização’ que contenha este parceiro ou este produto ficará sem
+linha de operação, e consequentemente sem configuração fiscal. É muito
+importante que os filtros das linhas de operação cubram todos os
+possíveis casos daquela operação.</p>
+<p>Vemos, então, que com a operação ‘Serviço de Industrialização’
+selecionada, a linha de operação escolhida foi a de mesmo nome,
+cadastrada no registro da operação.</p>
+<p>Logo, os impostos selecionados são aqueles nas definições fiscais desta
+linha de operação.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+          <div class="page-nav">
+            <div class="inner"><ul class="page-nav">
+</ul><div class="footer" role="contentinfo">
+      &#169; Copyright 2022, KMEE INFORMATICA LTDA.
+    <br>
+    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a> 0.6.1.
+</div>
+            </div>
+          </div>
+      </page>
+    </div>
+    
+    
+  </body>
+</html>

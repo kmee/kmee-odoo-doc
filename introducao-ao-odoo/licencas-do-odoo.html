@@ -1,0 +1,1556 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+      <title>Open Source / Open Core</title>
+    
+      <link rel="stylesheet" href="../_static/pygments.css">
+      <!-- bundled in js (rollup iife) -->
+      <!-- <link rel="stylesheet" href="../_static/theme.css"> -->
+      <link rel="stylesheet" href="../_static/sphinx_press_theme.css">
+          <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+          <link rel="stylesheet" href="../_static/css/theme.css " type="text/css" />
+      
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+
+      <!-- sphinx script_files -->
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+
+      
+      <!-- bundled in js (rollup iife) -->
+      <!-- <script src="../_static/theme-vendors.js"></script> -->
+      <script src="../_static/theme.js" defer></script>
+    
+  <link rel="index" title="Index" href="../genindex.html" />
+  <link rel="search" title="Search" href="../search.html" />
+  <link rel="next" title="Testando o Odoo sem instalar" href="testando-o-odoo-sem-precisar-instalar.html" />
+  <link rel="prev" title="Odoo Community Association" href="odoo-community-association.html" /> 
+  </head>
+
+  <body>
+    <div id="app" class="theme-container" :class="pageClasses"><navbar @toggle-sidebar="toggleSidebar">
+  <router-link to="../index.html" class="home-link">
+    
+      <span class="site-name">Kmee: Treinamento Odoo</span>
+    
+  </router-link>
+
+  <div class="links">
+    <navlinks class="can-hide">
+
+  
+    <div class="nav-item">
+      <a href="../index.html#introducao-ao-odoo"
+         class="nav-link  router-link-active">
+         introdução ao odoo
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="../index.html#instalando-o-odoo"
+         class="nav-link ">
+         instalando o odoo
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="../index.html#usuario-avancado"
+         class="nav-link ">
+         usuário avançado
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="../index.html#treinamento-funcional"
+         class="nav-link ">
+         treinamento funcional
+      </a>
+    </div>
+  
+
+
+
+    </navlinks>
+  </div>
+</navbar>
+
+      
+      <div class="sidebar-mask" @click="toggleSidebar(false)">
+      </div>
+        <sidebar @toggle-sidebar="toggleSidebar">
+          
+          <navlinks>
+            
+
+  
+    <div class="nav-item">
+      <a href="../index.html#introducao-ao-odoo"
+         class="nav-link  router-link-active">
+         introdução ao odoo
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="../index.html#instalando-o-odoo"
+         class="nav-link ">
+         instalando o odoo
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="../index.html#usuario-avancado"
+         class="nav-link ">
+         usuário avançado
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="../index.html#treinamento-funcional"
+         class="nav-link ">
+         treinamento funcional
+      </a>
+    </div>
+  
+
+
+
+            
+          </navlinks><div id="searchbox" class="searchbox" role="search">
+  <div class="caption"><span class="caption-text">Quick search</span>
+    <div class="searchformwrapper">
+      <form class="search" action="../search.html" method="get">
+        <input type="text" name="q" />
+        <input type="submit" value="Search" />
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
+  </div>
+</div><div class="sidebar-links" role="navigation" aria-label="main navigation">
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="../index.html#introducao-ao-odoo">introdução ao odoo</a></span>
+      </p>
+      <ul class="current">
+        
+          <li class="toctree-l1 "><a href="odoo-comece-por-aqui.html" class="reference internal ">Comece por aqui</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="a-historia-do-odoo.html" class="reference internal ">A história do Odoo</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="a-arquitetura-do-odoo.html" class="reference internal ">A arquitetura do Odoo</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="odoo-community-association.html" class="reference internal ">Odoo Community Association</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 current"><a href="#" class="reference internal current">Open Source / Open Core</a>
+
+            
+              <ul>
+                
+                  <li class="toctree-l2"><a href="#open-source-open-core-licencas-do-odoo" class="reference internal">Open Source / Open Core - Licenças do Odoo</a></li>
+                
+                  <li class="toctree-l2"><a href="#odoo-community" class="reference internal">2. Odoo Community</a></li>
+                
+                  <li class="toctree-l2"><a href="#conclusao" class="reference internal">3. Conclusão</a></li>
+                
+              </ul>
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="testando-o-odoo-sem-precisar-instalar.html" class="reference internal ">Testando o Odoo sem instalar</a>
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="../index.html#instalando-o-odoo">instalando o odoo</a></span>
+      </p>
+      <ul class="">
+        
+          <li class="toctree-l1 "><a href="../instalando-o-odoo/index.html" class="reference internal ">Introdução</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="../instalando-o-odoo/instalando-o-odoo-no-linux-com-o-instalador-deb.html" class="reference internal ">Instalando o Odoo no linux com o instalador .deb</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="../instalando-o-odoo/instalando-o-odoo-no-windows-com-o-instalador-exe.html" class="reference internal ">Instalando o Odoo no windows com o instalador .exe</a>
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="../index.html#usuario-avancado">usuário avançado</a></span>
+      </p>
+      <ul class="">
+        
+          <li class="toctree-l1 "><a href="../usuario-avancado-odoo/odoo-entendendo-a-interfaces-de-usuario.html" class="reference internal ">Interfaces de usuário</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="../usuario-avancado-odoo/odoo-configuracoes-basicas.html" class="reference internal ">Configurações básicas</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="../usuario-avancado-odoo/odoo-configuracoes-tecnicas.html" class="reference internal ">Configurações Técnicas</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="../usuario-avancado-odoo/odoo-importacao-e-exportacao-de-dados.html" class="reference internal ">Importação e Exportação de dados</a>
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="../index.html#treinamento-funcional">treinamento funcional</a></span>
+      </p>
+      <ul class="">
+        
+          <li class="toctree-l1 "><a href="../introducao-funcional-odoo/modulo-7-cadastros.html" class="reference internal ">Módulo 7 - Cadastros</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="../introducao-funcional-odoo/modulo-8-recursos-humanos.html" class="reference internal ">Módulo 8 - Recursos Humanos</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="../introducao-funcional-odoo/modulo-9-comunicacoes-emails.html" class="reference internal ">Módulo 9 - Comunicações / Emails</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="../introducao-funcional-odoo/modulo-10-fiscal.html" class="reference internal ">Treinamento Fiscal</a>
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 "><a href="../introducao-funcional-odoo/modulo-11-ponto-de-venda.html" class="reference internal ">Módulo 11 - Ponto de Venda</a>
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+</div>
+        </sidebar>
+
+      <page>
+          <div class="body-header" role="navigation" aria-label="navigation">
+  
+  <ul class="breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+    
+    <li>Open Source / Open Core</li>
+  </ul>
+  
+
+  <ul class="page-nav">
+  <li class="prev">
+    <a href="odoo-community-association.html"
+       title="previous chapter">← Odoo Community Association</a>
+  </li>
+  <li class="next">
+    <a href="testando-o-odoo-sem-precisar-instalar.html"
+       title="next chapter">Testando o Odoo sem instalar →</a>
+  </li>
+</ul>
+  
+</div>
+<hr>
+          <div class="content" role="main" v-pre>
+            
+  <div class="section" id="open-source-open-core">
+<h1>Open Source / Open Core<a class="headerlink" href="#open-source-open-core" title="Permalink to this headline">¶</a></h1>
+<p>Licenças do Odoo</p>
+<div class="section" id="open-source-open-core-licencas-do-odoo">
+<h2>Open Source / Open Core - Licenças do Odoo<a class="headerlink" href="#open-source-open-core-licencas-do-odoo" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-default" id="id5">
+<a class="reference internal image-reference" href="../_images/tipico-projeto-odoo.png"><img alt="Estrutura típica de um projeto Odoo." src="../_images/tipico-projeto-odoo.png" style="width: 800px;" /></a>
+<p class="caption"><span class="caption-text">Estrutura típica de um projeto Odoo.</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+<div class="section" id="odoo-enterprise">
+<h3>1. Odoo Enterprise<a class="headerlink" href="#odoo-enterprise" title="Permalink to this headline">¶</a></h3>
+<p>Podemos dividir a licença <strong>Enterprise</strong> em no mínimo quatro benefícios:</p>
+<ul class="simple">
+<li><p>Conjunto adicional de módulos;</p></li>
+<li><p>Upgrade de versão;</p></li>
+<li><p>Suporte;</p></li>
+<li><p>R&amp;D;</p></li>
+</ul>
+</div>
+<div class="section" id="conjunto-adicional-de-modulos">
+<h3>1.1 Conjunto adicional de módulos<a class="headerlink" href="#conjunto-adicional-de-modulos" title="Permalink to this headline">¶</a></h3>
+<p>Na versão 12 o <strong>Odoo Enterprise</strong> tem o seguinte conjunto de módulos:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 2%" />
+<col style="width: 12%" />
+<col style="width: 87%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Nº</p></th>
+<th class="head"><p>Modulo</p></th>
+<th class="head"><p>Descrição</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>account_3way_match</p></td>
+<td><p>“Na indústria as pessoas geralmente recebem as contas do fornecedor antes de receber sua compra, mas não querem pagar a conta até que as mercadorias sejam entregues.”</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>account_accountant</p></td>
+<td><p>Melhorias de usabilidade</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>account_asset</p></td>
+<td><p>Gestão de Ativos</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>account_bank_statement_import_camt</p></td>
+<td><p>Importação de extrato bancário CAMT</p></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p>account_bank_statement_import_csv</p></td>
+<td><p>Importação de extrato bancário CSV</p></td>
+</tr>
+<tr class="row-odd"><td><p>6</p></td>
+<td><p>account_bank_statement_import_ofx</p></td>
+<td><p>Importação de extrato bancário OFX</p></td>
+</tr>
+<tr class="row-even"><td><p>7</p></td>
+<td><p>account_bank_statement_import_qif</p></td>
+<td><p>Importação de extrato bancário QIF</p></td>
+</tr>
+<tr class="row-odd"><td><p>8</p></td>
+<td><p>account_batch_payment</p></td>
+<td><p>“Os pagamentos em lote permitem o agrupamento de pagamentos. O valor total depositado aparecerá como uma única transação em seu extrato bancário. Ao prosseguir com a reconciliação, basta selecionar o pagamento em lote correspondente para reconciliar todos os pagamentos.”</p></td>
+</tr>
+<tr class="row-even"><td><p>9</p></td>
+<td><p>account_budget</p></td>
+<td><p>Gestão Orçamentária</p></td>
+</tr>
+<tr class="row-odd"><td><p>10</p></td>
+<td><p>account_deferred_revenue</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>11</p></td>
+<td><p>account_intrastat</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>12</p></td>
+<td><p>account_invoice_extract</p></td>
+<td><p>OCR: Extraia dados de digitalizações de faturas para preenchê-los automaticamente</p></td>
+</tr>
+<tr class="row-even"><td><p>13</p></td>
+<td><p>account_invoice_extract_purchase</p></td>
+<td><p>OCR: Extraia dados de digitalizações de faturas para preenchê-los automaticamente</p></td>
+</tr>
+<tr class="row-odd"><td><p>14</p></td>
+<td><p>account_online_sync</p></td>
+<td><p>Este módulo é usado para sincronização bancária online. Ele fornece métodos básicos para sincronizar extrato bancário.</p></td>
+</tr>
+<tr class="row-even"><td><p>15</p></td>
+<td><p>account_online_synchronization</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>16</p></td>
+<td><p>account_plaid</p></td>
+<td><p>Use Plaid.com para recuperar extratos bancários.</p></td>
+</tr>
+<tr class="row-even"><td><p>17</p></td>
+<td><p>account_ponto</p></td>
+<td><p>Conecta-se ao myponto.com para recuperar extratos bancários.</p></td>
+</tr>
+<tr class="row-odd"><td><p>18</p></td>
+<td><p>account_predictive_bills</p></td>
+<td><p>Deixe o sistema tentar selecionar a conta e/ou produto certo para suas faturas de fornecedor</p></td>
+</tr>
+<tr class="row-even"><td><p>19</p></td>
+<td><p>account_reports</p></td>
+<td><p>Relatórios financeiros</p></td>
+</tr>
+<tr class="row-odd"><td><p>20</p></td>
+<td><p>account_reports_cash_flow</p></td>
+<td><p>Relatórios financeiros</p></td>
+</tr>
+<tr class="row-even"><td><p>21</p></td>
+<td><p>account_reports_followup</p></td>
+<td><p>Relatórios financeiros</p></td>
+</tr>
+<tr class="row-odd"><td><p>22</p></td>
+<td><p>account_sepa</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>23</p></td>
+<td><p>account_sepa_direct_debit</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>24</p></td>
+<td><p>account_taxcloud</p></td>
+<td><p>Calcule o imposto sobre vendas automaticamente usando o TaxCloud com base no endereço do cliente nos Estados Unidos.</p></td>
+</tr>
+<tr class="row-even"><td><p>25</p></td>
+<td><p>account_yodlee</p></td>
+<td><p>Sincronize seus feeds bancários com Yodlee</p></td>
+</tr>
+<tr class="row-odd"><td><p>26</p></td>
+<td><p>analytic_enterprise</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>27</p></td>
+<td><p>barcodes_mobile</p></td>
+<td><p>Código de barras no aplicativo móvel</p></td>
+</tr>
+<tr class="row-odd"><td><p>28</p></td>
+<td><p>base_automation_hr_contract</p></td>
+<td><p>Bridge para adicionar calendário de contrato em ações automatizadas</p></td>
+</tr>
+<tr class="row-even"><td><p>29</p></td>
+<td><p>crm_enterprise</p></td>
+<td><p>“Contém recursos avançados para CRM, como novas visualizações”</p></td>
+</tr>
+<tr class="row-odd"><td><p>30</p></td>
+<td><p>currency_rate_live</p></td>
+<td><p>Importar taxas de câmbio da Internet.</p></td>
+</tr>
+<tr class="row-even"><td><p>31</p></td>
+<td><p>delivery_barcode</p></td>
+<td><p>Este módulo adiciona suporte para leitura de códigos de barras aos pacotes de entrega.</p></td>
+</tr>
+<tr class="row-odd"><td><p>32</p></td>
+<td><p>delivery_bpost</p></td>
+<td><p>Envie seus envios através do bpost e acompanhe-os online</p></td>
+</tr>
+<tr class="row-even"><td><p>33</p></td>
+<td><p>delivery_dhl</p></td>
+<td><p>Envie seus envios através da DHL e rastreie-os online</p></td>
+</tr>
+<tr class="row-odd"><td><p>34</p></td>
+<td><p>delivery_easypost</p></td>
+<td><p>Envie os seus envios através do EASYPOS e acompanhe-os online</p></td>
+</tr>
+<tr class="row-even"><td><p>35</p></td>
+<td><p>delivery_fedex</p></td>
+<td><p>Envie seus envios por FEDEX e acompanhe-os online</p></td>
+</tr>
+<tr class="row-odd"><td><p>36</p></td>
+<td><p>delivery_ups</p></td>
+<td><p>Envie seus envios pela UPS e rastreie-os online</p></td>
+</tr>
+<tr class="row-even"><td><p>37</p></td>
+<td><p>delivery_usps</p></td>
+<td><p>Envie seus envios através do USPS e rastreie-os online</p></td>
+</tr>
+<tr class="row-odd"><td><p>38</p></td>
+<td><p>documents</p></td>
+<td><p>Gerenciamento de documento</p></td>
+</tr>
+<tr class="row-even"><td><p>39</p></td>
+<td><p>documents_account</p></td>
+<td><p>Gerenciamento de documento</p></td>
+</tr>
+<tr class="row-odd"><td><p>40</p></td>
+<td><p>documents_product</p></td>
+<td><p>Gerenciamento de documento</p></td>
+</tr>
+<tr class="row-even"><td><p>41</p></td>
+<td><p>documents_project</p></td>
+<td><p>Gerenciamento de documento</p></td>
+</tr>
+<tr class="row-odd"><td><p>42</p></td>
+<td><p>documents_sign</p></td>
+<td><p>Assinatura digital de documentos (sem certificado)</p></td>
+</tr>
+<tr class="row-even"><td><p>43</p></td>
+<td><p>event_barcode</p></td>
+<td><p>Integração com código de barras em eventos</p></td>
+</tr>
+<tr class="row-odd"><td><p>44</p></td>
+<td><p>event_barcode_mobile</p></td>
+<td><p>Integração com código de barras em eventos</p></td>
+</tr>
+<tr class="row-even"><td><p>45</p></td>
+<td><p>event_enterprise</p></td>
+<td><p>Melhorias de usabilidade</p></td>
+</tr>
+<tr class="row-odd"><td><p>46</p></td>
+<td><p>helpdesk</p></td>
+<td><p>Gestão de Chamados / Helpdesk</p></td>
+</tr>
+<tr class="row-even"><td><p>47</p></td>
+<td><p>helpdesk_sale_timesheet</p></td>
+<td><p>Gestão de Chamados / Helpdesk integrada com vendas</p></td>
+</tr>
+<tr class="row-odd"><td><p>48</p></td>
+<td><p>helpdesk_timesheet</p></td>
+<td><p>Gestão de Chamados / Helpdesk integrada com timesheet</p></td>
+</tr>
+<tr class="row-even"><td><p>49</p></td>
+<td><p>hr_appraisal</p></td>
+<td><p>Avaliação de funcionários</p></td>
+</tr>
+<tr class="row-odd"><td><p>50</p></td>
+<td><p>hr_contract_salary</p></td>
+<td><p>Configurador de Pacote Salarial</p></td>
+</tr>
+<tr class="row-even"><td><p>51</p></td>
+<td><p>hr_holidays_gantt</p></td>
+<td><p>Gantt de férias</p></td>
+</tr>
+<tr class="row-odd"><td><p>52</p></td>
+<td><p>inter_company_rules</p></td>
+<td><p>“Módulo para sincronização de Documentos entre várias empresas. Por exemplo, isso permite que você tenha um Pedido de Vendas criado automaticamente quando um Pedido de Compras for validado com outra empresa do sistema como fornecedora e inversamente.”</p></td>
+</tr>
+<tr class="row-even"><td><p>53</p></td>
+<td><p>iot</p></td>
+<td><p>Gestão de dispositivos IOT</p></td>
+</tr>
+<tr class="row-odd"><td><p>54</p></td>
+<td><p>iot_pairing</p></td>
+<td><p>Gestão de dispositivos IOT</p></td>
+</tr>
+<tr class="row-even"><td><p>114</p></td>
+<td><p>mail_enterprise</p></td>
+<td><p>Melhorias de usabilidade</p></td>
+</tr>
+<tr class="row-odd"><td><p>115</p></td>
+<td><p>mail_github</p></td>
+<td><p>Integração com github</p></td>
+</tr>
+<tr class="row-even"><td><p>116</p></td>
+<td><p>marketing_automation</p></td>
+<td><p>App de automação de campanhas de marketing</p></td>
+</tr>
+<tr class="row-odd"><td><p>117</p></td>
+<td><p>mass_mailing_themes</p></td>
+<td><p>Temas profissionais para envio de email em massa</p></td>
+</tr>
+<tr class="row-even"><td><p>118</p></td>
+<td><p>mrp_account</p></td>
+<td><p>Analytic Accounting in MRP</p></td>
+</tr>
+<tr class="row-odd"><td><p>119</p></td>
+<td><p>mrp_maintenance</p></td>
+<td><p>Integração entre o módulo de manutenção e a manufatura</p></td>
+</tr>
+<tr class="row-even"><td><p>120</p></td>
+<td><p>mrp_mps</p></td>
+<td><p>MPS</p></td>
+</tr>
+<tr class="row-odd"><td><p>121</p></td>
+<td><p>mrp_plm</p></td>
+<td><p>PLM</p></td>
+</tr>
+<tr class="row-even"><td><p>122</p></td>
+<td><p>mrp_workorder</p></td>
+<td><p>Melhorias de usabilidade</p></td>
+</tr>
+<tr class="row-odd"><td><p>123</p></td>
+<td><p>mrp_zebra</p></td>
+<td><p>Integração com Impressoras Zebra</p></td>
+</tr>
+<tr class="row-even"><td><p>124</p></td>
+<td><p>ocn_client</p></td>
+<td><p>“Este módulo permite notificações push para dispositivos registrados para mensagens diretas,”</p></td>
+</tr>
+<tr class="row-odd"><td><p>125</p></td>
+<td><p>pos_blackbox_be</p></td>
+<td><p>mensagens de bate-papo e canal.</p></td>
+</tr>
+<tr class="row-even"><td><p>126</p></td>
+<td><p>pos_enterprise</p></td>
+<td><p>Localização</p></td>
+</tr>
+<tr class="row-odd"><td><p>127</p></td>
+<td><p>pos_iot</p></td>
+<td><p>Melhorias de usabilidade</p></td>
+</tr>
+<tr class="row-even"><td><p>128</p></td>
+<td><p>pos_loyalty</p></td>
+<td><p>Gestão do IOT do ponto de venda via backend</p></td>
+</tr>
+<tr class="row-odd"><td><p>129</p></td>
+<td><p>pos_restaurant_iot</p></td>
+<td><p>Programa de Fidelidade para o Ponto de Venda</p></td>
+</tr>
+<tr class="row-even"><td><p>130</p></td>
+<td><p>product_unspsc</p></td>
+<td><p>Localização</p></td>
+</tr>
+<tr class="row-odd"><td><p>131</p></td>
+<td><p>project_enterprise</p></td>
+<td><p>Melhorias de usabilidade</p></td>
+</tr>
+<tr class="row-even"><td><p>132</p></td>
+<td><p>project_forecast</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>133</p></td>
+<td><p>project_timesheet_forecast</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>134</p></td>
+<td><p>project_timesheet_forecast_sale</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>135</p></td>
+<td><p>project_timesheet_synchro</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>136</p></td>
+<td><p>purchase_mrp_workorder_quality</p></td>
+<td><p>Controle de qualidade nas ordens de trabalho da manufatura</p></td>
+</tr>
+<tr class="row-odd"><td><p>137</p></td>
+<td><p>quality</p></td>
+<td><p>Módulo de Controle de qualidade</p></td>
+</tr>
+<tr class="row-even"><td><p>138</p></td>
+<td><p>quality_control</p></td>
+<td><p>Módulo de Controle de qualidade</p></td>
+</tr>
+<tr class="row-odd"><td><p>139</p></td>
+<td><p>quality_iot</p></td>
+<td><p>Módulo de Controle de qualidade</p></td>
+</tr>
+<tr class="row-even"><td><p>140</p></td>
+<td><p>quality_mrp</p></td>
+<td><p>Módulo de Controle de qualidade</p></td>
+</tr>
+<tr class="row-odd"><td><p>141</p></td>
+<td><p>quality_mrp_iot</p></td>
+<td><p>Módulo de Controle de qualidade</p></td>
+</tr>
+<tr class="row-even"><td><p>142</p></td>
+<td><p>quality_mrp_workorder</p></td>
+<td><p>Módulo de Controle de qualidade</p></td>
+</tr>
+<tr class="row-odd"><td><p>143</p></td>
+<td><p>sale_account_taxcloud</p></td>
+<td><p>Calcule o imposto sobre vendas automaticamente usando o TaxCloud com base no endereço do cliente nos Estados Unidos.</p></td>
+</tr>
+<tr class="row-even"><td><p>144</p></td>
+<td><p>sale_coupon</p></td>
+<td><p>Gestão de cupons</p></td>
+</tr>
+<tr class="row-odd"><td><p>145</p></td>
+<td><p>sale_coupon_delivery</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>146</p></td>
+<td><p>sale_coupon_taxcloud</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>147</p></td>
+<td><p>sale_coupon_taxcloud_delivery</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>148</p></td>
+<td><p>sale_ebay</p></td>
+<td><p>Integração com ebay</p></td>
+</tr>
+<tr class="row-odd"><td><p>149</p></td>
+<td><p>sale_enterprise</p></td>
+<td><p>Melhorias de usabilidade</p></td>
+</tr>
+<tr class="row-even"><td><p>150</p></td>
+<td><p>sale_intrastat</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>151</p></td>
+<td><p>sale_subscription</p></td>
+<td><p>Vendas recorrentes</p></td>
+</tr>
+<tr class="row-even"><td><p>152</p></td>
+<td><p>sale_subscription_asset</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>153</p></td>
+<td><p>sale_subscription_dashboard</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>154</p></td>
+<td><p>sale_subscription_taxcloud</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>155</p></td>
+<td><p>sign</p></td>
+<td><p>Assinatura digital de documentos (sem certificado)</p></td>
+</tr>
+<tr class="row-even"><td><p>156</p></td>
+<td><p>snailmail_account_reports_followup</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>157</p></td>
+<td><p>stock_account_enterprise</p></td>
+<td><p>Analytic Accounting in Stock</p></td>
+</tr>
+<tr class="row-even"><td><p>158</p></td>
+<td><p>stock_barcode</p></td>
+<td><p>Integração com código de barras no inventário</p></td>
+</tr>
+<tr class="row-odd"><td><p>159</p></td>
+<td><p>stock_barcode_mobile</p></td>
+<td><p>Integração com código de barras no inventário</p></td>
+</tr>
+<tr class="row-even"><td><p>160</p></td>
+<td><p>stock_barcode_quality_control</p></td>
+<td><p>Integração com código de barras no inventário</p></td>
+</tr>
+<tr class="row-odd"><td><p>161</p></td>
+<td><p>stock_enterprise</p></td>
+<td><p>Melhorias de usabilidade</p></td>
+</tr>
+<tr class="row-even"><td><p>162</p></td>
+<td><p>stock_intrastat</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>163</p></td>
+<td><p>test_marketing_automation</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>164</p></td>
+<td><p>timesheet_grid</p></td>
+<td><p>Melhorias de usabilidade</p></td>
+</tr>
+<tr class="row-odd"><td><p>165</p></td>
+<td><p>timesheet_grid_sale</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>166</p></td>
+<td><p>voip</p></td>
+<td><p>Integração com VOIP</p></td>
+</tr>
+<tr class="row-odd"><td><p>167</p></td>
+<td><p>voip_onsip</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>168</p></td>
+<td><p>web_cohort</p></td>
+<td><p>Visão Cohort</p></td>
+</tr>
+<tr class="row-odd"><td><p>169</p></td>
+<td><p>web_dashboard</p></td>
+<td><p>Visão Dashboard</p></td>
+</tr>
+<tr class="row-even"><td><p>170</p></td>
+<td><p>web_enterprise</p></td>
+<td><p>Melhorias de usabilidade</p></td>
+</tr>
+<tr class="row-odd"><td><p>171</p></td>
+<td><p>web_gantt</p></td>
+<td><p>Visão Gantt</p></td>
+</tr>
+<tr class="row-even"><td><p>172</p></td>
+<td><p>web_grid</p></td>
+<td><p>Visão Grid</p></td>
+</tr>
+<tr class="row-odd"><td><p>173</p></td>
+<td><p>web_mobile</p></td>
+<td><p>Melhorias de usabilidade no mobile e integração com APP Odoo SA</p></td>
+</tr>
+<tr class="row-even"><td><p>174</p></td>
+<td><p>website_calendar</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>175</p></td>
+<td><p>website_crm_score</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>176</p></td>
+<td><p>website_delivery_ups</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>177</p></td>
+<td><p>website_enterprise</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>178</p></td>
+<td><p>website_form_editor</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>179</p></td>
+<td><p>website_helpdesk</p></td>
+<td><p>Abertura de chamados através do site.</p></td>
+</tr>
+<tr class="row-even"><td><p>180</p></td>
+<td><p>website_helpdesk_form</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>181</p></td>
+<td><p>website_helpdesk_forum</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>182</p></td>
+<td><p>website_helpdesk_livechat</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>183</p></td>
+<td><p>website_helpdesk_slides</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>184</p></td>
+<td><p>website_sale_account_taxcloud</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>185</p></td>
+<td><p>website_sale_coupon</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>186</p></td>
+<td><p>website_sale_dashboard</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>187</p></td>
+<td><p>website_sale_taxcloud_delivery</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>188</p></td>
+<td><p>website_studio</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>189</p></td>
+<td><p>website_twitter_wall</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>190</p></td>
+<td><p>web_studio</p></td>
+<td><p>Permite o usuário leigo realizar customizações simples.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="upgrade-de-versao">
+<h3>1.2 Upgrade de versão<a class="headerlink" href="#upgrade-de-versao" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Uma versão LTS “.0” por ano (12.0, 13.0,…) é lançada em Outubro;</p></li>
+<li><p>3 versões LTS mais recentes suportadas a qualquer momento;</p></li>
+<li><p>Atualizações diárias de instaladores de pacotes estáveis com as
+correções de bugs mais recentes;</p></li>
+<li><p>Versões intermediárias “saas-*” não são suportadas, exceto no Odoo
+Cloud.</p></li>
+</ul>
+<div class="figure align-default" id="id6">
+<a class="reference internal image-reference" href="../_images/lts.png"><img alt="Linha do tempo das versões" src="../_images/lts.png" style="width: 800px;" /></a>
+<p class="caption"><span class="caption-text">Linha do tempo das versões</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</div>
+<p>A Odoo S.A. possui uma ferramenta de atualização de banco de dados entre
+as versões LTS, disponível no link: <a class="reference external" href="https://upgrade.odoo.com/">https://upgrade.odoo.com/</a></p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Entretanto no upgrade da Odoo SA só são atualizados os módulos do core e do enterprise.</strong></p>
+<p><strong>Qualquer customização ou módulo de terceiros a migração de dados e de
+código fica por conta do cliente / partner / consultoria.</strong></p>
+</div>
+</div>
+<div class="section" id="suporte">
+<h3><strong>1.3 Suporte</strong><a class="headerlink" href="#suporte" title="Permalink to this headline">¶</a></h3>
+<p>A Odoo S.A possui um canal de suporte online onde é possível tirar
+dúvidas caso você tenha uma licença enterprise válida:
+<a class="reference external" href="https://www.odoo.com/pt_BR/help">https://www.odoo.com/pt_BR/help</a></p>
+<ul class="simple">
+<li><p>Uma pergunta sobre como usar ou configurar Odoo</p></li>
+<li><p>Um bug ou comportamento incorreto;</p></li>
+<li><p>Um problema relacionado à minha atualização / upgrade de versão.</p></li>
+</ul>
+</div>
+<div class="section" id="r-d">
+<h3><strong>1.4 R&amp;D</strong><a class="headerlink" href="#r-d" title="Permalink to this headline">¶</a></h3>
+<p>A receita do Odoo EE financia o desenvolvimento do Odoo CE e do EE. <strong>O
+fundador e CEO do Odoo, Fabien Pinckaers, prometeu repetidamente o
+compromisso de manter 80% do código como código aberto no Odoo CE e 20%
+no Odoo EE proprietário.</strong></p>
+</div>
+</div>
+<div class="section" id="odoo-community">
+<h2>2. Odoo Community<a class="headerlink" href="#odoo-community" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Conjunto adicional de módulos;</p></li>
+<li><p>Upgrade de versão;</p></li>
+<li><p>Suporte;</p></li>
+<li><p>R&amp;D;</p></li>
+</ul>
+<div class="section" id="id1">
+<h3>2.1 Conjunto adicional de módulos<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p><strong>Será que é possível usar o Odoo sem o Enterprise contando com módulos
+alternativos da comunidade de código aberto?</strong></p>
+<hr class="docutils" />
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 4%" />
+<col style="width: 27%" />
+<col style="width: 69%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Nº</p></th>
+<th class="head"><p>Modulo</p></th>
+<th class="head"><p>Alternativa OCA</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>account_3way_match</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p>account_accountant</p></td>
+<td><p>“<a class="reference external" href="https://github.com/OCA/account-financial-tools">https://github.com/OCA/account-financial-tools</a> e <a class="reference external" href="https://github.com/OCA/account-invoicing/">https://github.com/OCA/account-invoicing/</a>”</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>account_asset</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p>account_bank_statement_import_camt</p></td>
+<td><p>account_bank_statement_import_camt_oca</p></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p>account_bank_statement_import_csv</p></td>
+<td><p>account_bank_statement_import_txt_xlsx</p></td>
+</tr>
+<tr class="row-odd"><td><p>6</p></td>
+<td><p>account_bank_statement_import_ofx</p></td>
+<td><p>account_bank_statement_import_ofx</p></td>
+</tr>
+<tr class="row-even"><td><p>7</p></td>
+<td><p>account_bank_statement_import_qif</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>8</p></td>
+<td><p>account_batch_payment</p></td>
+<td><p><a class="reference external" href="https://github.com/OCA/bank-payment">https://github.com/OCA/bank-payment</a></p></td>
+</tr>
+<tr class="row-even"><td><p>9</p></td>
+<td><p>account_budget</p></td>
+<td><p><a class="reference external" href="https://github.com/OCA/bank-payment">https://github.com/OCA/bank-payment</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>10</p></td>
+<td><p>account_deferred_revenue</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>11</p></td>
+<td><p>account_intrastat</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>12</p></td>
+<td><p>account_invoice_extract</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>13</p></td>
+<td><p>account_invoice_extract_purchase</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>14</p></td>
+<td><p>account_online_sync</p></td>
+<td><p>account_bank_statement_import_online</p></td>
+</tr>
+<tr class="row-even"><td><p>15</p></td>
+<td><p>account_online_synchronization</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>16</p></td>
+<td><p>account_plaid</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>17</p></td>
+<td><p>account_ponto</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>18</p></td>
+<td><p>account_predictive_bills</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>19</p></td>
+<td><p>account_reports</p></td>
+<td><p><a class="reference external" href="https://github.com/OCA/account-financial-reporting">https://github.com/OCA/account-financial-reporting</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>20</p></td>
+<td><p>account_reports_cash_flow</p></td>
+<td><p><a class="reference external" href="https://github.com/OCA/account-financial-reporting">https://github.com/OCA/account-financial-reporting</a></p></td>
+</tr>
+<tr class="row-even"><td><p>21</p></td>
+<td><p>account_reports_followup</p></td>
+<td><p><a class="reference external" href="https://github.com/OCA/account-financial-reporting">https://github.com/OCA/account-financial-reporting</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>22</p></td>
+<td><p>account_sepa</p></td>
+<td><p><a class="reference external" href="https://github.com/OCA/bank-payment">https://github.com/OCA/bank-payment</a></p></td>
+</tr>
+<tr class="row-even"><td><p>23</p></td>
+<td><p>account_sepa_direct_debit</p></td>
+<td><p><a class="reference external" href="https://github.com/OCA/bank-payment">https://github.com/OCA/bank-payment</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>24</p></td>
+<td><p>account_taxcloud</p></td>
+<td><p>account_avatax</p></td>
+</tr>
+<tr class="row-even"><td><p>25</p></td>
+<td><p>account_yodlee</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>26</p></td>
+<td><p>analytic_enterprise</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>27</p></td>
+<td><p>barcodes_mobile</p></td>
+<td><p><a class="reference external" href="https://github.com/OCA/stock-logistics-barcode">https://github.com/OCA/stock-logistics-barcode</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>28</p></td>
+<td><p>base_automation_hr_contract</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>29</p></td>
+<td><p>crm_enterprise</p></td>
+<td><p><a class="reference external" href="https://github.com/OCA/crm">https://github.com/OCA/crm</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>30</p></td>
+<td><p>currency_rate_live</p></td>
+<td><p><a class="reference external" href="https://github.com/OCA/currency">https://github.com/OCA/currency</a></p></td>
+</tr>
+<tr class="row-even"><td><p>31</p></td>
+<td><p>delivery_barcode</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>32</p></td>
+<td><p>delivery_bpost</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>33</p></td>
+<td><p>delivery_dhl</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>34</p></td>
+<td><p>delivery_easypost</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>35</p></td>
+<td><p>delivery_fedex</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>36</p></td>
+<td><p>delivery_ups</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>37</p></td>
+<td><p>delivery_usps</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>38</p></td>
+<td><p>documents</p></td>
+<td><p><a class="reference external" href="https://github.com/OCA/knowledge">https://github.com/OCA/knowledge</a></p></td>
+</tr>
+<tr class="row-even"><td><p>39</p></td>
+<td><p>documents_account</p></td>
+<td><p><a class="reference external" href="https://github.com/OCA/knowledge">https://github.com/OCA/knowledge</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>40</p></td>
+<td><p>documents_product</p></td>
+<td><p><a class="reference external" href="https://github.com/OCA/knowledge">https://github.com/OCA/knowledge</a></p></td>
+</tr>
+<tr class="row-even"><td><p>41</p></td>
+<td><p>documents_project</p></td>
+<td><p><a class="reference external" href="https://github.com/OCA/knowledge">https://github.com/OCA/knowledge</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>42</p></td>
+<td><p>documents_sign</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>43</p></td>
+<td><p>event_barcode</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>44</p></td>
+<td><p>event_barcode_mobile</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>45</p></td>
+<td><p>event_enterprise</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>46</p></td>
+<td><p>helpdesk</p></td>
+<td><p><a class="reference external" href="https://github.com/OCA/helpdesk">https://github.com/OCA/helpdesk</a></p></td>
+</tr>
+<tr class="row-even"><td><p>47</p></td>
+<td><p>helpdesk_sale_timesheet</p></td>
+<td><p><a class="reference external" href="https://github.com/OCA/helpdesk">https://github.com/OCA/helpdesk</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>48</p></td>
+<td><p>helpdesk_timesheet</p></td>
+<td><p><a class="reference external" href="https://github.com/OCA/helpdesk">https://github.com/OCA/helpdesk</a></p></td>
+</tr>
+<tr class="row-even"><td><p>49</p></td>
+<td><p>hr_appraisal</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>50</p></td>
+<td><p>hr_contract_salary</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>51</p></td>
+<td><p>hr_holidays_gantt</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>52</p></td>
+<td><p>inter_company_rules</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>53</p></td>
+<td><p>iot</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>54</p></td>
+<td><p>iot_pairing</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>114</p></td>
+<td><p>mail_enterprise</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>115</p></td>
+<td><p>mail_github</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>116</p></td>
+<td><p>marketing_automation</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>117</p></td>
+<td><p>mass_mailing_themes</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>118</p></td>
+<td><p>mrp_account</p></td>
+<td><p><a class="reference external" href="https://github.com/OCA/manufacture">https://github.com/OCA/manufacture</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>119</p></td>
+<td><p>mrp_maintenance</p></td>
+<td><p><a class="reference external" href="https://github.com/OCA/manufacture">https://github.com/OCA/manufacture</a></p></td>
+</tr>
+<tr class="row-even"><td><p>120</p></td>
+<td><p>mrp_mps</p></td>
+<td><p><a class="reference external" href="https://github.com/OCA/manufacture">https://github.com/OCA/manufacture</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>121</p></td>
+<td><p>mrp_plm</p></td>
+<td><p><a class="reference external" href="https://github.com/OCA/manufacture">https://github.com/OCA/manufacture</a></p></td>
+</tr>
+<tr class="row-even"><td><p>122</p></td>
+<td><p>mrp_workorder</p></td>
+<td><p><a class="reference external" href="https://github.com/OCA/manufacture">https://github.com/OCA/manufacture</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>123</p></td>
+<td><p>mrp_zebra</p></td>
+<td><p><a class="reference external" href="https://github.com/OCA/manufacture">https://github.com/OCA/manufacture</a></p></td>
+</tr>
+<tr class="row-even"><td><p>124</p></td>
+<td><p>ocn_client</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>125</p></td>
+<td><p>pos_blackbox_be</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>126</p></td>
+<td><p>pos_enterprise</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>127</p></td>
+<td><p>pos_iot</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>128</p></td>
+<td><p>pos_loyalty</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>129</p></td>
+<td><p>pos_restaurant_iot</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>130</p></td>
+<td><p>product_unspsc</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>131</p></td>
+<td><p>project_enterprise</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>132</p></td>
+<td><p>project_forecast</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>133</p></td>
+<td><p>project_timesheet_forecast</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>134</p></td>
+<td><p>project_timesheet_forecast_sale</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>135</p></td>
+<td><p>project_timesheet_synchro</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>136</p></td>
+<td><p>purchase_mrp_workorder_quality</p></td>
+<td><p><a class="reference external" href="https://github.com/OCA/manufacture">https://github.com/OCA/manufacture</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>137</p></td>
+<td><p>quality</p></td>
+<td><p><a class="reference external" href="https://github.com/OCA/manufacture">https://github.com/OCA/manufacture</a></p></td>
+</tr>
+<tr class="row-even"><td><p>138</p></td>
+<td><p>quality_control</p></td>
+<td><p><a class="reference external" href="https://github.com/OCA/manufacture">https://github.com/OCA/manufacture</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>139</p></td>
+<td><p>quality_iot</p></td>
+<td><p><a class="reference external" href="https://github.com/OCA/manufacture">https://github.com/OCA/manufacture</a></p></td>
+</tr>
+<tr class="row-even"><td><p>140</p></td>
+<td><p>quality_mrp</p></td>
+<td><p><a class="reference external" href="https://github.com/OCA/manufacture">https://github.com/OCA/manufacture</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>141</p></td>
+<td><p>quality_mrp_iot</p></td>
+<td><p><a class="reference external" href="https://github.com/OCA/manufacture">https://github.com/OCA/manufacture</a></p></td>
+</tr>
+<tr class="row-even"><td><p>142</p></td>
+<td><p>quality_mrp_workorder</p></td>
+<td><p><a class="reference external" href="https://github.com/OCA/manufacture">https://github.com/OCA/manufacture</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>143</p></td>
+<td><p>sale_account_taxcloud</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>144</p></td>
+<td><p>sale_coupon</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>145</p></td>
+<td><p>sale_coupon_delivery</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>146</p></td>
+<td><p>sale_coupon_taxcloud</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>147</p></td>
+<td><p>sale_coupon_taxcloud_delivery</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>148</p></td>
+<td><p>sale_ebay</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>149</p></td>
+<td><p>sale_enterprise</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>150</p></td>
+<td><p>sale_intrastat</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>151</p></td>
+<td><p>sale_subscription</p></td>
+<td><p><a class="reference external" href="https://github.com/OCA/contract">https://github.com/OCA/contract</a></p></td>
+</tr>
+<tr class="row-even"><td><p>152</p></td>
+<td><p>sale_subscription_asset</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>153</p></td>
+<td><p>sale_subscription_dashboard</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>154</p></td>
+<td><p>sale_subscription_taxcloud</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>155</p></td>
+<td><p>sign</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>156</p></td>
+<td><p>snailmail_account_reports_followup</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>157</p></td>
+<td><p>stock_account_enterprise</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>158</p></td>
+<td><p>stock_barcode</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>159</p></td>
+<td><p>stock_barcode_mobile</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>160</p></td>
+<td><p>stock_barcode_quality_control</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>161</p></td>
+<td><p>stock_enterprise</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>162</p></td>
+<td><p>stock_intrastat</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>163</p></td>
+<td><p>test_marketing_automation</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>164</p></td>
+<td><p>timesheet_grid</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>165</p></td>
+<td><p>timesheet_grid_sale</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>166</p></td>
+<td><p>voip</p></td>
+<td><p><a class="reference external" href="https://github.com/OCA/connector-telephony">https://github.com/OCA/connector-telephony</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>167</p></td>
+<td><p>voip_onsip</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>168</p></td>
+<td><p>web_cohort</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>169</p></td>
+<td><p>web_dashboard</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>170</p></td>
+<td><p>web_enterprise</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>171</p></td>
+<td><p>web_gantt</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>172</p></td>
+<td><p>web_grid</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>173</p></td>
+<td><p>web_mobile</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>174</p></td>
+<td><p>website_calendar</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>175</p></td>
+<td><p>website_crm_score</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>176</p></td>
+<td><p>website_delivery_ups</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>177</p></td>
+<td><p>website_enterprise</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>178</p></td>
+<td><p>website_form_editor</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>179</p></td>
+<td><p>website_helpdesk</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>180</p></td>
+<td><p>website_helpdesk_form</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>181</p></td>
+<td><p>website_helpdesk_forum</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>182</p></td>
+<td><p>website_helpdesk_livechat</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>183</p></td>
+<td><p>website_helpdesk_slides</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>184</p></td>
+<td><p>website_sale_account_taxcloud</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>185</p></td>
+<td><p>website_sale_coupon</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>186</p></td>
+<td><p>website_sale_dashboard</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>187</p></td>
+<td><p>website_sale_taxcloud_delivery</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>188</p></td>
+<td><p>website_studio</p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>189</p></td>
+<td><p>website_twitter_wall</p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>190</p></td>
+<td><p>web_studio</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="upgrade-de-versao-1">
+<span id="id2"></span><h3>2.2 Upgrade de versão<a class="headerlink" href="#upgrade-de-versao-1" title="Permalink to this headline">¶</a></h3>
+<p>Para atualizar versões da comunidade contamos com uma ferramenta chamada
+OpenUpgrade: <a class="reference external" href="https://oca.github.io/OpenUpgrade/">https://oca.github.io/OpenUpgrade/</a></p>
+<p>Ela pode ser utilizada para migrar banco de dados sem Enterprise.</p>
+</div>
+<div class="section" id="suporte-1">
+<span id="id3"></span><h3>2.3 Suporte<a class="headerlink" href="#suporte-1" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Uma pergunta sobre como usar ou configurar Odoo;</p>
+<ul>
+<li><p>A Odoo SA não vai saber te dizer como um módulo da OCA funciona.</p></li>
+<li><p>A Odoo SA não fornece suporte a questões locais em alguns países;</p></li>
+</ul>
+</li>
+<li><p>Um bug ou comportamento incorreto;</p>
+<ul>
+<li><p>Não existe suporte formal dos módulos de código aberto, mas você
+pode e deve reportar um problema no repositório relacionado. Que
+muitas vezes esse problema é corrigido de forma gratuita depois de
+alguns dias/meses ou anos.</p></li>
+<li><p>Também é possível pesquisar ou fazer novas perguntas no forum:
+<a class="reference external" href="https://www.odoo.com/pt_BR/forum/ajuda-1">https://www.odoo.com/pt_BR/forum/ajuda-1</a></p></li>
+</ul>
+</li>
+</ul>
+<ul class="simple">
+<li><p>Um problema relacionado à minha atualização / upgrade de versão.</p>
+<ul>
+<li><p>Pode ser reportado no OpenUpgrade ou projetos relacionados.</p></li>
+<li><p>Se você esta usando um módulo que não esta contemplado no
+OpenUpgrade, sugiro entrar em contato com algum especialista.</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="rd-1">
+<span id="id4"></span><h3>2.4 R&amp;D<a class="headerlink" href="#rd-1" title="Permalink to this headline">¶</a></h3>
+<p>Quando você contrata um parceiro ou consultor local, procure saber se
+ele tem envolvimento e costuma contribuir com a comunidade. Pois com
+certeza durante a implementação do seu projeto surgirão requisitos que
+podem ser incluídos na OCA e beneficiar outras empresas.</p>
+<p>Então caso seu projeto seja executado dentro dos padrões da OCA e você
+pode ter múltiplos benefícios:</p>
+<ul class="simple">
+<li><p>Redução do custo de manutenção no longo prazo;</p></li>
+<li><p>Aumento da qualidade do código, pois outros membros da OCA revisarão
+seu código;</p></li>
+</ul>
+<p><a class="reference external" href="https://odoo-community.org/page/become-a-sponsor">https://odoo-community.org/page/become-a-sponsor</a></p>
+</div>
+</div>
+<div class="section" id="conclusao">
+<h2>3. Conclusão<a class="headerlink" href="#conclusao" title="Permalink to this headline">¶</a></h2>
+<p>O que é melhor? Odoo Community ou Enterprise?</p>
+</div>
+</div>
+
+
+          </div>
+          <div class="page-nav">
+            <div class="inner"><ul class="page-nav">
+  <li class="prev">
+    <a href="odoo-community-association.html"
+       title="previous chapter">← Odoo Community Association</a>
+  </li>
+  <li class="next">
+    <a href="testando-o-odoo-sem-precisar-instalar.html"
+       title="next chapter">Testando o Odoo sem instalar →</a>
+  </li>
+</ul><div class="footer" role="contentinfo">
+      &#169; Copyright 2022, KMEE INFORMATICA LTDA.
+    <br>
+    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a> 0.6.1.
+</div>
+            </div>
+          </div>
+      </page>
+    </div>
+    
+    
+  </body>
+</html>
